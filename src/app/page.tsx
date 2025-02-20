@@ -59,7 +59,7 @@ export default function Home() {
               />
               <div className="absolute inset-0 bg-black/30" />
             </div>
-            <div className="relative z-10 h-full flex">
+            <div className="relative z-10 h-full flex cursor-pointer">
               <div className="flex flex-row md:flex-col justify-between py-8 px-8">
                 <span className="text-3xl md:text-4xl font-light text-gray-300 md:group-hover:text-white transition-colors duration-500">01</span>
                 <h2 className="text-xl md:text-2xl font-light md:rotate-180 md:[writing-mode:vertical-lr] md:group-hover:text-white transition-colors duration-500">
@@ -87,7 +87,7 @@ export default function Home() {
               />
               <div className="absolute inset-0 bg-black/30" />
             </div>
-            <div className="relative z-10 h-full flex">
+            <div className="relative z-10 h-full flex cursor-pointer">
               <div className="flex flex-row md:flex-col justify-between py-8 px-8">
                 <span className="text-3xl md:text-4xl font-light text-gray-300 md:group-hover:text-white transition-colors duration-500">02</span>
                 <h2 className="text-xl md:text-2xl font-light md:rotate-180 md:[writing-mode:vertical-lr] md:group-hover:text-white transition-colors duration-500">
@@ -119,7 +119,7 @@ export default function Home() {
               />
               <div className="absolute inset-0 bg-black/30" />
             </div>
-            <div className="relative z-10 h-full flex">
+            <div className="relative z-10 h-full flex cursor-pointer">
               <div className="flex flex-row md:flex-col justify-between py-8 px-8">
                 <span className="text-3xl md:text-4xl font-light text-gray-300 md:group-hover:text-white transition-colors duration-500">03</span>
                 <h2 className="text-xl md:text-2xl font-light md:rotate-180 md:[writing-mode:vertical-lr] md:group-hover:text-white transition-colors duration-500">
@@ -149,7 +149,7 @@ export default function Home() {
               />
               <div className="absolute inset-0 bg-black/30" />
             </div>
-            <div className="relative z-10 h-full flex">
+            <div className="relative z-10 h-full flex cursor-pointer">
               <div className="flex flex-row md:flex-col justify-between py-8 px-8">
                 <span className="text-3xl md:text-4xl font-light text-gray-300 md:group-hover:text-white transition-colors duration-500">04</span>
                 <h2 className="text-xl md:text-2xl font-light md:rotate-180 md:[writing-mode:vertical-lr] md:group-hover:text-white transition-colors duration-500">

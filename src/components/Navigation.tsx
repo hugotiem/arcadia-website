@@ -47,7 +47,7 @@ export default function Navigation() {
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center justify-between h-full">
             {/* Left Navigation */}
-            <div className="flex space-x-8">
+            {/* <div className="flex space-x-8"> */}
               <Link 
                 href="/reservation" 
                 className="relative text-gray-800 hover:text-gray-600 text-sm transition-colors duration-300 group"
@@ -62,7 +62,7 @@ export default function Navigation() {
                 L&apos;esprit
                 <span className="absolute inset-x-0 -bottom-1 h-0.5 bg-gray-200 scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left" />
               </Link>
-            </div>
+            {/* </div> */}
 
             {/* Center Logo Desktop */}
             <div className="flex-shrink-0 transform hover:scale-105 transition-transform duration-300 mx-8">
@@ -79,7 +79,7 @@ export default function Navigation() {
             </div>
 
             {/* Right Navigation */}
-            <div className="flex space-x-8">
+            {/* <div className="flex space-x-8"> */}
               <Link 
                 href="/arcadia" 
                 className="relative text-gray-800 hover:text-gray-600 text-sm transition-colors duration-300 group"
@@ -94,7 +94,7 @@ export default function Navigation() {
                 Notre histoire
                 <span className="absolute inset-x-0 -bottom-1 h-0.5 bg-gray-200 scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left" />
               </Link>
-            </div>
+            {/* </div> */}
           </div>
         </div>
 
