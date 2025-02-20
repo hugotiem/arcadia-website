@@ -1,3 +1,5 @@
+# Salut Hugo ! Voici le site de l'Arcadia.
+
 # Arcadia - Site Web
 
 Site web vitrine pour le voilier de luxe Arcadia, développé avec Next.js et TailwindCSS.
