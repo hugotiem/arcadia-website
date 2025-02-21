@@ -1,11 +1,18 @@
 'use client'
 
-import { useState, FormEvent, ChangeEvent } from 'react'
+import { useState, FormEvent, ChangeEvent, useRef } from 'react'
 import Navigation from '@/components/Navigation'
 import PhoneInput from '@/components/PhoneInput'
 import CountrySelect from '@/components/CountrySelect'
 import EmailInput from '@/components/EmailInput'
 import Image from 'next/image'
+
+interface Experience {
+  id: string;
+  title: string;
+  description: string;
+  image: string;
+}
 
 export default function Reservation() {
   const [formData, setFormData] = useState({
@@ -22,6 +29,36 @@ export default function Reservation() {
   })
   const [dateError, setDateError] = useState('')
   const [isSubmitted, setIsSubmitted] = useState(false)
+  const [selectedExperience, setSelectedExperience] = useState<Experience | null>(null)
+  const [isExpanded, setIsExpanded] = useState(false)
+  const expandedSectionRef = useRef<HTMLDivElement>(null)
+
+  const experiences: Experience[] = [
+    {
+      id: "01",
+      title: "Navigation Journalière",
+      description: "Une parenthèse rare s'ouvre à quatre privilégiés. Le temps d'une journée, notre équipage perpétue la grande tradition maritime, entre élégance du service et raffinement des instants.",
+      image: "/01.jpg"
+    },
+    {
+      id: "02",
+      title: "Réceptions Distinguées",
+      description: "Dans l'intimité de dix convives, notre navire devient l'écrin de vos célébrations les plus délicates. Un cadre d'exception pour des moments choisis, où discrétion et excellence se marient naturellement.",
+      image: "/02.jpg"
+    },
+    {
+      id: "03",
+      title: "Croisières Hebdomadaires",
+      description: "Une semaine d'exception où le temps se suspend entre ciel et mer. Nos escales soigneusement sélectionnées vous font découvrir les plus beaux mouillages de Méditerranée.",
+      image: "/03.jpg"
+    },
+    {
+      id: "04",
+      title: "Expériences Personnalisées",
+      description: "Votre rêve maritime prend vie selon vos désirs. Notre équipage met son expertise à votre service pour créer une expérience unique, à votre image.",
+      image: "/04.jpg"
+    }
+  ]
 
   const validateDate = (date: string) => {
     if (!date) return "La date de départ est requise"
@@ -95,6 +132,34 @@ export default function Reservation() {
     // ... logique de soumission
   }
 
+  const handleExperienceClick = (experience: Experience) => {
+    if (selectedExperience?.id === experience.id) {
+      setIsExpanded(false)
+      setTimeout(() => setSelectedExperience(null), 300)
+    } else {
+      setSelectedExperience(experience)
+      setTimeout(() => {
+        setIsExpanded(true)
+        const element = expandedSectionRef.current
+        if (element) {
+          const navHeight = 80 // Hauteur de la barre de navigation
+          const elementRect = element.getBoundingClientRect()
+          const absoluteElementTop = elementRect.top + window.pageYOffset
+          const windowHeight = window.innerHeight
+          const elementHeight = elementRect.height
+          
+          // Calcul de la position optimale pour centrer la section
+          const scrollPosition = absoluteElementTop - navHeight - ((windowHeight - elementHeight) / 4)
+          
+          window.scrollTo({
+            top: scrollPosition,
+            behavior: 'smooth'
+          })
+        }
+      }, 100)
+    }
+  }
+
   const today = new Date().toISOString().split('T')[0]
 
   if (isSubmitted) {
@@ -151,148 +216,81 @@ export default function Reservation() {
 
       {/* Experiences Grid */}
       <section className="py-12 md:py-20">
-        <div className="max-w-7xl mx-auto px-4 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-0">
-          {/* Navigation Journalière */}
-          <div className="group relative h-[400px] md:h-[600px] border-b md:border-b-0 md:border-r border-gray-100">
-            <div className="absolute inset-0 md:opacity-0 md:group-hover:opacity-100 transition-all duration-700">
-              <Image
-                src="/01.jpg"
-                alt="Navigation Journalière"
-                fill
-                className="object-cover"
-              />
-              <div className="absolute inset-0 bg-black/30" />
-            </div>
-            <div className="relative z-10 h-full flex flex-col justify-center cursor-pointer p-8">
-              <div className="flex flex-row items-center gap-8">
-                <h2 className="text-xl md:text-2xl font-light md:rotate-180 md:[writing-mode:vertical-lr] md:group-hover:text-white transition-colors duration-500">
-                  Navigation Journalière
-                </h2>
-                
-                <div className="flex-1">
-                  <div className="bg-white/80 md:bg-transparent p-4 md:p-0 rounded-lg md:rounded-none">
-                    <p className="text-base md:text-sm text-gray-800 md:text-gray-600 md:group-hover:text-white transition-colors duration-500">
-                      Une parenthèse rare s&apos;ouvre à quatre privilégiés. Le temps
-                      d&apos;une journée, notre équipage perpétue la grande tradition
-                      maritime, entre élégance du service et raffinement des instants.
-                    </p>
+        <div className="max-w-7xl mx-auto px-4">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-0">
+            {experiences.map((experience) => (
+              <div 
+                key={experience.id}
+                className="group relative h-[400px] md:h-[600px] border-b md:border-b-0 md:border-r border-gray-100 last:border-r-0"
+                onClick={() => handleExperienceClick(experience)}
+              >
+                <div className="absolute inset-0 md:opacity-0 md:group-hover:opacity-100 transition-all duration-700">
+                  <Image
+                    src={experience.image}
+                    alt={experience.title}
+                    fill
+                    className="object-cover"
+                  />
+                  <div className="absolute inset-0 bg-black/30" />
+                </div>
+                <div className="relative z-10 h-full flex flex-col justify-center cursor-pointer p-8">
+                  <div className="flex flex-row items-center gap-8">
+                    <h2 className="text-xl md:text-2xl font-light md:rotate-180 md:[writing-mode:vertical-lr] md:group-hover:text-white transition-colors duration-500">
+                      {experience.title}
+                    </h2>
+                    
+                    <div className="flex-1">
+                      <div className="bg-white/80 md:bg-transparent p-4 md:p-0 rounded-lg md:rounded-none">
+                        <p className="text-base md:text-sm text-gray-800 md:text-gray-600 md:group-hover:text-white transition-colors duration-500">
+                          {experience.description}
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div className="absolute bottom-8 right-8">
+                    <span className="text-3xl md:text-4xl font-light text-gray-300 md:group-hover:text-white transition-colors duration-500">{experience.id}</span>
                   </div>
                 </div>
               </div>
-
-              <div className="absolute bottom-8 right-8">
-                <span className="text-3xl md:text-4xl font-light text-gray-300 md:group-hover:text-white transition-colors duration-500">01</span>
-              </div>
-            </div>
+            ))}
           </div>
 
-          {/* Réceptions Distinguées */}
-          <div className="group relative h-[400px] md:h-[600px] border-b md:border-b-0 md:border-r border-gray-100">
-            <div className="absolute inset-0 md:opacity-0 md:group-hover:opacity-100 transition-all duration-700">
-              <Image
-                src="/02.jpg"
-                alt="Réceptions Distinguées"
-                fill
-                className="object-cover"
-              />
-              <div className="absolute inset-0 bg-black/30" />
-            </div>
-            <div className="relative z-10 h-full flex flex-col justify-center cursor-pointer p-8">
-              <div className="flex flex-row items-center gap-8">
-                <h2 className="text-xl md:text-2xl font-light md:rotate-180 md:[writing-mode:vertical-lr] md:group-hover:text-white transition-colors duration-500">
-                  Réceptions Distinguées
-                </h2>
-                
-                <div className="flex-1">
-                  <div className="bg-white/80 md:bg-transparent p-4 md:p-0 rounded-lg md:rounded-none">
-                    <p className="text-base md:text-sm text-gray-800 md:text-gray-600 md:group-hover:text-white transition-colors duration-500">
-                      Dans l&apos;intimité de dix convives,
-                      notre navire devient l&apos;écrin de
-                      vos célébrations les plus délicates.
-                      Un cadre d&apos;exception pour des
-                      moments choisis, où discrétion
-                      et excellence se marient
-                      naturellement.
-                    </p>
+          {/* Expanded Experience View */}
+          <div ref={expandedSectionRef}>
+            {selectedExperience && (
+              <div 
+                className={`mt-8 transition-all duration-500 ease-out overflow-hidden w-screen relative left-1/2 right-1/2 -ml-[50vw] -mr-[50vw] ${
+                  isExpanded ? 'max-h-[90vh] opacity-100' : 'max-h-0 opacity-0'
+                }`}
+              >
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-0 bg-white">
+                  <div className="relative h-[50vh] md:h-[90vh] overflow-hidden">
+                    <Image
+                      src={selectedExperience.image}
+                      alt={selectedExperience.title}
+                      fill
+                      className={`object-cover transition-all duration-700 ${
+                        isExpanded ? 'scale-100' : 'scale-110'
+                      }`}
+                      priority
+                    />
+                  </div>
+                  <div className="p-8 md:p-16 flex flex-col justify-center max-w-3xl">
+                    <div className={`transform transition-all duration-500 delay-200 ${
+                      isExpanded ? 'translate-x-0 opacity-100' : 'translate-x-10 opacity-0'
+                    }`}>
+                      <h2 className="text-5xl md:text-7xl font-light mb-8 [writing-mode:horizontal-tb] rotate-0">
+                        {selectedExperience.title}
+                      </h2>
+                      <p className="text-xl text-gray-600 leading-relaxed">
+                        {selectedExperience.description}
+                      </p>
+                    </div>
                   </div>
                 </div>
               </div>
-
-              <div className="absolute bottom-8 right-8">
-                <span className="text-3xl md:text-4xl font-light text-gray-300 md:group-hover:text-white transition-colors duration-500">02</span>
-              </div>
-            </div>
-          </div>
-
-          {/* Croisières Hebdomadaires */}
-          <div className="group relative h-[400px] md:h-[600px] border-b md:border-b-0 md:border-r border-gray-100">
-            <div className="absolute inset-0 md:opacity-0 md:group-hover:opacity-100 transition-all duration-700">
-              <Image
-                src="/03.jpg"
-                alt="Croisières Hebdomadaires"
-                fill
-                className="object-cover"
-              />
-              <div className="absolute inset-0 bg-black/30" />
-            </div>
-            <div className="relative z-10 h-full flex flex-col justify-center cursor-pointer p-8">
-              <div className="flex flex-row items-center gap-8">
-                <h2 className="text-xl md:text-2xl font-light md:rotate-180 md:[writing-mode:vertical-lr] md:group-hover:text-white transition-colors duration-500">
-                  Croisières Hebdomadaires
-                </h2>
-                
-                <div className="flex-1">
-                  <div className="bg-white/80 md:bg-transparent p-4 md:p-0 rounded-lg md:rounded-none">
-                    <p className="text-base md:text-sm text-gray-800 md:text-gray-600 md:group-hover:text-white transition-colors duration-500">
-                      Une semaine d&apos;exception où le temps
-                      se suspend entre ciel et mer. Nos
-                      escales soigneusement sélectionnées
-                      vous font découvrir les plus beaux
-                      mouillages de Méditerranée.
-                    </p>
-                  </div>
-                </div>
-              </div>
-
-              <div className="absolute bottom-8 right-8">
-                <span className="text-3xl md:text-4xl font-light text-gray-300 md:group-hover:text-white transition-colors duration-500">03</span>
-              </div>
-            </div>
-          </div>
-
-          {/* Expériences Personnalisées */}
-          <div className="group relative h-[400px] md:h-[600px]">
-            <div className="absolute inset-0 md:opacity-0 md:group-hover:opacity-100 transition-all duration-700">
-              <Image
-                src="/04.jpg"
-                alt="Expériences Personnalisées"
-                fill
-                className="object-cover"
-              />
-              <div className="absolute inset-0 bg-black/30" />
-            </div>
-            <div className="relative z-10 h-full flex flex-col justify-center cursor-pointer p-8">
-              <div className="flex flex-row items-center gap-8">
-                <h2 className="text-xl md:text-2xl font-light md:rotate-180 md:[writing-mode:vertical-lr] md:group-hover:text-white transition-colors duration-500">
-                  Expériences Personnalisées
-                </h2>
-                
-                <div className="flex-1">
-                  <div className="bg-white/80 md:bg-transparent p-4 md:p-0 rounded-lg md:rounded-none">
-                    <p className="text-base md:text-sm text-gray-800 md:text-gray-600 md:group-hover:text-white transition-colors duration-500">
-                      Votre rêve maritime prend vie selon
-                      vos désirs. Notre équipage met son
-                      expertise à votre service pour créer
-                      une expérience unique, à votre image.
-                    </p>
-                  </div>
-                </div>
-              </div>
-
-              <div className="absolute bottom-8 right-8">
-                <span className="text-3xl md:text-4xl font-light text-gray-300 md:group-hover:text-white transition-colors duration-500">04</span>
-              </div>
-            </div>
+            )}
           </div>
         </div>
       </section>
