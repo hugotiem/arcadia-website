@@ -10,7 +10,7 @@ export default function Gallery() {
     <MotionProvider>
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4">
         {experiences.map((experience) => (
-          <Link href={`/detail/${experience.id}`} key={experience.id} className="block">
+          <Link href={`/reservation/${experience.id}`} key={experience.id} className="block">
             <div className="relative cursor-pointer w-full border-l-4 border-gray-100">
               <motion.div
                 layoutId={`card-container-${experience.id}`}

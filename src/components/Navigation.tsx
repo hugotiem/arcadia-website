@@ -3,9 +3,15 @@
 import Link from 'next/link'
 import Image from 'next/image'
 import { useState } from 'react'
+import { usePathname } from 'next/navigation'
 
 export default function Navigation() {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
+  const pathname = usePathname()
+
+  const isActive = (path: string) => {
+    return pathname.startsWith(path)
+  }
 
   return (
     <nav className="fixed w-full bg-white/95 backdrop-blur-sm z-50 border-b border-gray-100">
@@ -47,22 +53,24 @@ export default function Navigation() {
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center justify-between h-full">
             {/* Left Navigation */}
-            {/* <div className="flex space-x-8"> */}
-              <Link 
-                href="/reservation" 
-                className="relative text-gray-800 hover:text-gray-600 text-sm transition-colors duration-300 group"
-              >
-                Réservation
-                <span className="absolute inset-x-0 -bottom-1 h-0.5 bg-gray-200 scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left" />
-              </Link>
-              <Link 
-                href="/esprit" 
-                className="relative text-gray-800 hover:text-gray-600 text-sm transition-colors duration-300 group"
-              >
-                L&apos;esprit
-                <span className="absolute inset-x-0 -bottom-1 h-0.5 bg-gray-200 scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left" />
-              </Link>
-            {/* </div> */}
+            <Link 
+              href="/reservation" 
+              className="relative text-gray-800 hover:text-gray-600 text-sm transition-colors duration-300 group"
+            >
+              Réservation
+              <span className={`absolute inset-x-0 -bottom-1 h-0.5 bg-gray-800 transition-transform duration-300 origin-left ${
+                isActive('/reservation') ? 'scale-x-100' : 'scale-x-0 group-hover:scale-x-100 group-hover:bg-gray-200'
+              }`} />
+            </Link>
+            <Link 
+              href="/esprit" 
+              className="relative text-gray-800 hover:text-gray-600 text-sm transition-colors duration-300 group"
+            >
+              L&apos;esprit
+              <span className={`absolute inset-x-0 -bottom-1 h-0.5 bg-gray-800 transition-transform duration-300 origin-left ${
+                isActive('/esprit') ? 'scale-x-100' : 'scale-x-0 group-hover:scale-x-100 group-hover:bg-gray-200'
+              }`} />
+            </Link>
 
             {/* Center Logo Desktop */}
             <div className="flex-shrink-0 transform hover:scale-105 transition-transform duration-300 mx-8">
@@ -79,22 +87,24 @@ export default function Navigation() {
             </div>
 
             {/* Right Navigation */}
-            {/* <div className="flex space-x-8"> */}
-              <Link 
-                href="/arcadia" 
-                className="relative text-gray-800 hover:text-gray-600 text-sm transition-colors duration-300 group"
-              >
-                L&apos;arcadia
-                <span className="absolute inset-x-0 -bottom-1 h-0.5 bg-gray-200 scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left" />
-              </Link>
-              <Link 
-                href="/histoire" 
-                className="relative text-gray-800 hover:text-gray-600 text-sm transition-colors duration-300 group"
-              >
-                Notre histoire
-                <span className="absolute inset-x-0 -bottom-1 h-0.5 bg-gray-200 scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left" />
-              </Link>
-            {/* </div> */}
+            <Link 
+              href="/arcadia" 
+              className="relative text-gray-800 hover:text-gray-600 text-sm transition-colors duration-300 group"
+            >
+              L&apos;arcadia
+              <span className={`absolute inset-x-0 -bottom-1 h-0.5 bg-gray-800 transition-transform duration-300 origin-left ${
+                isActive('/arcadia') ? 'scale-x-100' : 'scale-x-0 group-hover:scale-x-100 group-hover:bg-gray-200'
+              }`} />
+            </Link>
+            <Link 
+              href="/histoire" 
+              className="relative text-gray-800 hover:text-gray-600 text-sm transition-colors duration-300 group"
+            >
+              Notre histoire
+              <span className={`absolute inset-x-0 -bottom-1 h-0.5 bg-gray-800 transition-transform duration-300 origin-left ${
+                isActive('/histoire') ? 'scale-x-100' : 'scale-x-0 group-hover:scale-x-100 group-hover:bg-gray-200'
+              }`} />
+            </Link>
           </div>
         </div>
 
@@ -103,28 +113,44 @@ export default function Navigation() {
           <div className="pt-2 pb-4 space-y-1">
             <Link 
               href="/reservation" 
-              className="block px-3 py-2 text-base font-medium text-gray-700 hover:text-gray-900 hover:bg-gray-50 rounded-md"
+              className={`block px-3 py-2 text-base font-medium rounded-md ${
+                isActive('/reservation') 
+                  ? 'text-gray-900 bg-gray-50' 
+                  : 'text-gray-700 hover:text-gray-900 hover:bg-gray-50'
+              }`}
               onClick={() => setIsMenuOpen(false)}
             >
               Réservation
             </Link>
             <Link 
               href="/esprit" 
-              className="block px-3 py-2 text-base font-medium text-gray-700 hover:text-gray-900 hover:bg-gray-50 rounded-md"
+              className={`block px-3 py-2 text-base font-medium rounded-md ${
+                isActive('/esprit') 
+                  ? 'text-gray-900 bg-gray-50' 
+                  : 'text-gray-700 hover:text-gray-900 hover:bg-gray-50'
+              }`}
               onClick={() => setIsMenuOpen(false)}
             >
               L&apos;esprit
             </Link>
             <Link 
               href="/arcadia" 
-              className="block px-3 py-2 text-base font-medium text-gray-700 hover:text-gray-900 hover:bg-gray-50 rounded-md"
+              className={`block px-3 py-2 text-base font-medium rounded-md ${
+                isActive('/arcadia') 
+                  ? 'text-gray-900 bg-gray-50' 
+                  : 'text-gray-700 hover:text-gray-900 hover:bg-gray-50'
+              }`}
               onClick={() => setIsMenuOpen(false)}
             >
               L&apos;arcadia
             </Link>
             <Link 
               href="/histoire" 
-              className="block px-3 py-2 text-base font-medium text-gray-700 hover:text-gray-900 hover:bg-gray-50 rounded-md"
+              className={`block px-3 py-2 text-base font-medium rounded-md ${
+                isActive('/histoire') 
+                  ? 'text-gray-900 bg-gray-50' 
+                  : 'text-gray-700 hover:text-gray-900 hover:bg-gray-50'
+              }`}
               onClick={() => setIsMenuOpen(false)}
             >
               Notre histoire
