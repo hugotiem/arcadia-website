@@ -1,5 +1,34 @@
-export const galleryItems = [
-  { id: 1, title: 'Mountain Landscape', image: '/images/mountain.jpg', color: '#3498db', description: 'A breathtaking view of the mountains at sunrise, showcasing the majesty of nature.' },
-  { id: 2, title: 'Ocean Sunset', image: '/images/ocean.jpg', color: '#e74c3c', description: 'The golden sun setting over calm ocean waters, painting the sky in vibrant colors.' },
-  { id: 3, title: 'Forest Trail', image: '/images/forest.jpg', color: '#2ecc71', description: 'A peaceful trail winding through an ancient forest filled with towering trees.' },
-];
+
+ export interface Experience {
+  id: string;
+  title: string;
+  description: string;
+  image: string;
+}
+
+export const experiences: Experience[] = [
+    {
+      id: "01",
+      title: "Navigation Journalière",
+      description: "Une parenthèse rare s'ouvre à quatre privilégiés. Le temps d'une journée, notre équipage perpétue la grande tradition maritime, entre élégance du service et raffinement des instants.",
+      image: "/01.jpg"
+    },
+    {
+      id: "02",
+      title: "Réceptions Distinguées",
+      description: "Dans l'intimité de dix convives, notre navire devient l'écrin de vos célébrations les plus délicates. Un cadre d'exception pour des moments choisis, où discrétion et excellence se marient naturellement.",
+      image: "/02.jpg"
+    },
+    {
+      id: "03",
+      title: "Croisières Hebdomadaires",
+      description: "Une semaine d'exception où le temps se suspend entre ciel et mer. Nos escales soigneusement sélectionnées vous font découvrir les plus beaux mouillages de Méditerranée.",
+      image: "/03.jpg"
+    },
+    {
+      id: "04",
+      title: "Expériences Personnalisées",
+      description: "Votre rêve maritime prend vie selon vos désirs. Notre équipage met son expertise à votre service pour créer une expérience unique, à votre image.",
+      image: "/04.jpg"
+    }
+  ]

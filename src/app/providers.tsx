@@ -8,8 +8,8 @@ export function MotionProvider({ children }: { children: ReactNode }) {
   const pathname = usePathname();
   
   return (
-    <AnimatePresence mode="wait" initial={false}>
-      <div key={pathname}>{children}</div>
-    </AnimatePresence>
+      <AnimatePresence mode="wait" initial={false}>
+        <div key={pathname}>{children}</div>
+      </AnimatePresence>
   );
 }
