@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
+import { customFont } from './fonts'
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -15,8 +16,8 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="fr">
-      <body className={inter.className}>
+    <html lang="en" className={`${customFont.variable}`}>
+      <body className="font-custom antialiased">
         {children}
       </body>
     </html>
