@@ -8,6 +8,8 @@ import EmailInput from '@/components/EmailInput'
 import Image from 'next/image'
 import { Experience, experiences } from '../gallery-data'
 import Gallery from '@/components/Gallery'
+import ReservationForm from '@/components/ReservationForm'
+
 export default function Reservation() {
   const [formData, setFormData] = useState({
     prenom: '',
@@ -225,6 +227,8 @@ export default function Reservation() {
         </div>
       </section>
 
+      {/* add a divider */}
+      <div className="h-[1px] bg-gray-500 mt-20" />
       {/* Reservation Form */}
       <section className="py-12 md:py-20">
         <div className="max-w-3xl mx-auto px-4">
@@ -235,126 +239,12 @@ export default function Reservation() {
             </p>
           </div>
 
-          <form onSubmit={handleSubmit} className="space-y-8">
-            {/* Nom et Prénom */}
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-              <div>
-                <label htmlFor="prenom" className="block text-sm font-light text-gray-600 mb-2">
-                  Prénom
-                </label>
-                <input
-                  type="text"
-                  id="prenom"
-                  name="prenom"
-                  value={formData.prenom}
-                  onChange={handleChange}
-                  onBlur={() => handleBlur('prenom')}
-                  className={`w-full px-4 py-2 border rounded-md focus:outline-none focus:ring-2 transition-shadow ${
-                    !formData.prenom && touched.prenom
-                      ? 'border-red-300 focus:ring-red-200'
-                      : formData.prenom
-                      ? 'border-green-300 focus:ring-green-200'
-                      : 'border-gray-200 focus:ring-gray-200'
-                  }`}
-                  required
-                />
-                {!formData.prenom && touched.prenom && (
-                  <p className="mt-1 text-xs text-red-500">
-                    Le prénom est requis
-                  </p>
-                )}
-              </div>
-              <div>
-                <label htmlFor="nom" className="block text-sm font-light text-gray-600 mb-2">
-                  Nom
-                </label>
-                <input
-                  type="text"
-                  id="nom"
-                  name="nom"
-                  value={formData.nom}
-                  onChange={handleChange}
-                  onBlur={() => handleBlur('nom')}
-                  className={`w-full px-4 py-2 border rounded-md focus:outline-none focus:ring-2 transition-shadow ${
-                    !formData.nom && touched.nom
-                      ? 'border-red-300 focus:ring-red-200'
-                      : formData.nom
-                      ? 'border-green-300 focus:ring-green-200'
-                      : 'border-gray-200 focus:ring-gray-200'
-                  }`}
-                  required
-                />
-                {!formData.nom && touched.nom && (
-                  <p className="mt-1 text-xs text-red-500">
-                    Le nom est requis
-                  </p>
-                )}
-              </div>
-            </div>
-
-            {/* Téléphone et Pays */}
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-              <PhoneInput onCountryChange={handleCountryChange} />
-              <CountrySelect value={formData.pays} onChange={handleCountryChange} />
-            </div>
-
-            {/* Email */}
-            <EmailInput />
-
-            {/* Date de départ */}
-            <div>
-              <label htmlFor="date" className="block text-sm font-light text-gray-600 mb-2">
-                Quand souhaitez vous partir ?
-              </label>
-              <input
-                type="date"
-                id="date"
-                name="date"
-                min={today}
-                value={formData.date}
-                onChange={handleChange}
-                onBlur={() => handleBlur('date')}
-                className={`w-full px-4 py-2 border rounded-md focus:outline-none focus:ring-2 transition-shadow ${
-                  dateError && touched.date
-                    ? 'border-red-300 focus:ring-red-200'
-                    : formData.date && !dateError
-                    ? 'border-green-300 focus:ring-green-200'
-                    : 'border-gray-200 focus:ring-gray-200'
-                }`}
-                required
-              />
-              {touched.date && dateError && (
-                <p className="mt-1 text-xs text-red-500">
-                  {dateError}
-                </p>
-              )}
-            </div>
-
-            {/* Message */}
-            <div>
-              <label htmlFor="message" className="block text-sm font-light text-gray-600 mb-2">
-                Message additionel
-              </label>
-              <textarea
-                id="message"
-                name="message"
-                value={formData.message}
-                onChange={handleChange}
-                rows={6}
-                className="w-full px-4 py-2 border border-gray-200 rounded-md focus:outline-none focus:ring-2 focus:ring-gray-200 transition-shadow resize-none"
-              ></textarea>
-            </div>
-
-            {/* Submit Button */}
-            <div className="text-center">
-              <button
-                type="submit"
-                className="px-8 py-3 bg-gray-900 text-white rounded-md hover:bg-gray-800 transition-colors"
-              >
-                Envoyer
-              </button>
-            </div>
-          </form>
+          <ReservationForm 
+            onSubmit={(formData) => {
+              setFormData(formData)
+              setIsSubmitted(true)
+            }} 
+          />
         </div>
       </section>
     </main>
