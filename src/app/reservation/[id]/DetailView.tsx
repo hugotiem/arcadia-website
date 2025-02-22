@@ -1,9 +1,9 @@
 'use client';
 
-import { motion, useScroll, useInView } from 'framer-motion';
-import { useRouter } from 'next/navigation';
+import { motion, useInView } from 'framer-motion';
 import { experiences } from '@/app/gallery-data';
 import { useRef } from 'react';
+import Image from 'next/image';
 import ReservationForm from '@/components/ReservationForm'
 import Navigation from '@/components/Navigation'
 
@@ -104,7 +104,7 @@ export default function DetailView({ itemId }: { itemId: string }) {
           transition={{ delay: 0.8, duration: 0.6 }}
         >
           <p className="text-gray-600 leading-relaxed text-lg">
-            Le voyage débute dès le quai, le voilier vous tend les bras, déjà le voilà prêt, dans le port-là, à larguer les amarres pour votre horizon. Élégante et sans contrainte, ainsi se déroule une excursion authentique avec le capitaine. Le départ, une découverte approchée avec le capitaine, femme d'expérience qui vous guide dans les eaux de la côte d'azur. Une parenthèse rare s'ouvre à quatre privilégiés.
+            Le voyage débute dès le quai, le voilier vous tend les bras, déjà le voilà prêt, dans le port-là, à larguer les amarres pour votre horizon. Élégante et sans contrainte, ainsi se déroule une excursion authentique avec le capitaine. Le départ, une découverte approchée avec le capitaine, femme d&apos;expérience qui vous guide dans les eaux de la côte d&apos;azur. Une parenthèse rare s&apos;ouvre à quatre privilégiés.
           </p>
         </motion.div>
 
@@ -121,11 +121,16 @@ export default function DetailView({ itemId }: { itemId: string }) {
             <div className="order-2 md:order-1">
               <h2 className="text-2xl font-light mb-6">LIBERTÉ ET FLEXIBILITÉ TOTALE</h2>
               <p className="text-gray-600 leading-relaxed">
-                Le voyage s'en remet à vous et votre voilier vous transporte où que vous mène dans le temps et l'espace selon vos aspirations. Liberté absolue pour naviguer à votre rythme, vous arrêter où bon vous semble. Élégante et sans contrainte, ainsi se déroule une excursion authentique avec le capitaine. Pensez, décidez, nous exécutons. Le programme est le vôtre, la destination est votre choix.
+                Le voyage s&apos;en remet à vous et votre voilier vous transporte où que vous mène dans le temps et l&apos;espace selon vos aspirations. Liberté absolue pour naviguer à votre rythme, vous arrêter où bon vous semble. Élégante et sans contrainte, ainsi se déroule une excursion authentique avec le capitaine. Pensez, décidez, nous exécutons. Le programme est le vôtre, la destination est votre choix.
               </p>
             </div>
-            <div className="order-1 md:order-2">
-              <img src="/liberty.jpg" alt="Liberté en mer" className="rounded-lg shadow-xl" />
+            <div className="order-1 md:order-2 relative h-[400px]">
+              <Image 
+                src="/liberty.jpg" 
+                alt="Liberté en mer" 
+                fill
+                className="rounded-lg shadow-xl object-cover" 
+              />
             </div>
           </motion.section>
 
@@ -137,13 +142,18 @@ export default function DetailView({ itemId }: { itemId: string }) {
             animate={isSection2InView ? { opacity: 1, y: 0 } : { opacity: 0, y: 50 }}
             transition={{ duration: 0.6 }}
           >
-            <div>
-              <img src="/cuisine.jpg" alt="Cuisine d'exception" className="rounded-lg shadow-xl" />
+            <div className="relative h-[400px]">
+              <Image 
+                src="/cuisine.jpg" 
+                alt="Cuisine d&apos;exception" 
+                fill
+                className="rounded-lg shadow-xl object-cover" 
+              />
             </div>
             <div>
-              <h2 className="text-2xl font-light mb-6">UNE CUISINE D'EXCEPTION</h2>
+              <h2 className="text-2xl font-light mb-6">UNE CUISINE D&apos;EXCEPTION</h2>
               <p className="text-gray-600 leading-relaxed">
-                Une cuisine raffinée, préparée à bord par notre chef. Il sublime les produits frais de la mer et du terroir. À la fois délicate et authentique, la gastronomie à bord est un art qui se décline à chaque repas. Nous accordons une attention particulière à vos préférences pour créer des menus sur mesure. Notre chef s'adapte à vos goûts et restrictions alimentaires pour que chaque repas soit un moment de plaisir absolu.
+                Une cuisine raffinée, préparée à bord par notre chef. Il sublime les produits frais de la mer et du terroir. À la fois délicate et authentique, la gastronomie à bord est un art qui se décline à chaque repas. Nous accordons une attention particulière à vos préférences pour créer des menus sur mesure. Notre chef s&apos;adapte à vos goûts et restrictions alimentaires pour que chaque repas soit un moment de plaisir absolu.
               </p>
             </div>
           </motion.section>
@@ -159,11 +169,16 @@ export default function DetailView({ itemId }: { itemId: string }) {
             <div className="order-2 md:order-1">
               <h2 className="text-2xl font-light mb-6">ACTIVITÉS ET DÉCOUVERTE</h2>
               <p className="text-gray-600 leading-relaxed">
-                Chaque escale est une invitation à de nouvelles découvertes. Profitez des plus belles plages de la Méditerranée, explorez des criques secrètes accessibles uniquement par la mer. Le capitaine et l'équipage vous accompagnent dans vos activités nautiques : paddle, snorkeling, pêche... Découvrez les trésors cachés du littoral et profitez de moments privilégiés en toute intimité.
+                Chaque escale est une invitation à de nouvelles découvertes. Profitez des plus belles plages de la Méditerranée, explorez des criques secrètes accessibles uniquement par la mer. Le capitaine et l&apos;équipage vous accompagnent dans vos activités nautiques : paddle, snorkeling, pêche... Découvrez les trésors cachés du littoral et profitez de moments privilégiés en toute intimité.
               </p>
             </div>
-            <div className="order-1 md:order-2">
-              <img src="/activities.jpg" alt="Activités en mer" className="rounded-lg shadow-xl" />
+            <div className="order-1 md:order-2 relative h-[400px]">
+              <Image 
+                src="/activities.jpg" 
+                alt="Activités en mer" 
+                fill
+                className="rounded-lg shadow-xl object-cover" 
+              />
             </div>
           </motion.section>
         </div>
@@ -181,10 +196,7 @@ export default function DetailView({ itemId }: { itemId: string }) {
 
             <ReservationForm 
               onSubmit={(formData) => {
-                // Handle form submission
                 console.log('Form submitted:', formData)
-                // You can add additional logic here like showing a success message
-                // or redirecting to a confirmation page
               }} 
             />
           </div>

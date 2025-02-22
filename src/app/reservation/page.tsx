@@ -1,12 +1,9 @@
 'use client'
 
-import { useState, FormEvent, ChangeEvent, useRef } from 'react'
+import { useState, useRef } from 'react'
 import Navigation from '@/components/Navigation'
-import PhoneInput from '@/components/PhoneInput'
-import CountrySelect from '@/components/CountrySelect'
-import EmailInput from '@/components/EmailInput'
 import Image from 'next/image'
-import { Experience, experiences } from '../gallery-data'
+import { Experience } from '../gallery-data'
 import Gallery from '@/components/Gallery'
 import ReservationForm from '@/components/ReservationForm'
 
@@ -18,30 +15,10 @@ export default function Reservation() {
     message: '',
     pays: ''
   })
-  const [touched, setTouched] = useState({
-    prenom: false,
-    nom: false,
-    date: false
-  })
-  const [dateError, setDateError] = useState('')
   const [isSubmitted, setIsSubmitted] = useState(false)
-  const [selectedExperience, setSelectedExperience] = useState<Experience | null>(null)
-  const [isExpanded, setIsExpanded] = useState(false)
+  const [selectedExperience] = useState<Experience | null>(null)
+  const [isExpanded] = useState(false)
   const expandedSectionRef = useRef<HTMLDivElement>(null)
-
-  const validateDate = (date: string) => {
-    if (!date) return "La date de départ est requise"
-    
-    const selectedDate = new Date(date)
-    const today = new Date()
-    today.setHours(0, 0, 0, 0)
-
-    if (selectedDate < today) {
-      return "La date de départ doit être dans le futur"
-    }
-    
-    return ""
-  }
 
   const formatDate = (date: string) => {
     return new Date(date).toLocaleDateString('fr-FR', {
@@ -51,85 +28,6 @@ export default function Reservation() {
       day: 'numeric'
     })
   }
-
-  const handleChange = (e: ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
-    const { name, value } = e.target
-    setFormData(prev => ({
-      ...prev,
-      [name]: value
-    }))
-
-    if (name === 'date') {
-      setDateError(validateDate(value))
-    }
-  }
-
-  const handleCountryChange = (countryCode: string) => {
-    setFormData(prev => ({
-      ...prev,
-      pays: countryCode
-    }))
-  }
-
-  const handleBlur = (field: string) => {
-    setTouched(prev => ({
-      ...prev,
-      [field]: true
-    }))
-
-    if (field === 'date') {
-      setDateError(validateDate(formData.date))
-    }
-  }
-
-  const handleSubmit = (e: FormEvent) => {
-    e.preventDefault()
-    setTouched({
-      prenom: true,
-      nom: true,
-      date: true
-    })
-
-    const dateValidationError = validateDate(formData.date)
-    setDateError(dateValidationError)
-
-    if (dateValidationError) {
-      return
-    }
-
-    setIsSubmitted(true)
-    // ... logique de soumission
-  }
-
-  const handleExperienceClick = (experience: Experience) => {
-    if (selectedExperience?.id === experience.id) {
-      setIsExpanded(false)
-      setTimeout(() => setSelectedExperience(null), 300)
-    } else {
-      setSelectedExperience(experience)
-      setTimeout(() => {
-        setIsExpanded(true)
-        const element = expandedSectionRef.current
-        if (element) {
-          const navHeight = 80 // Hauteur de la barre de navigation
-          const elementRect = element.getBoundingClientRect()
-          const absoluteElementTop = elementRect.top + window.pageYOffset
-          const windowHeight = window.innerHeight
-          const elementHeight = elementRect.height
-          
-          // Calcul de la position optimale pour centrer la section
-          const scrollPosition = absoluteElementTop - navHeight - ((windowHeight - elementHeight) / 4)
-          
-          window.scrollTo({
-            top: scrollPosition,
-            behavior: 'smooth'
-          })
-        }
-      }, 100)
-    }
-  }
-
-  const today = new Date().toISOString().split('T')[0]
 
   if (isSubmitted) {
     return (
