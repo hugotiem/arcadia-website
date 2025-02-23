@@ -1,5 +1,4 @@
 import Navigation from '@/components/Navigation'
-import BottomBar from '@/components/BottomBar'
 
 export default function Arcadia() {
   return (
@@ -33,8 +32,6 @@ export default function Arcadia() {
           </div>
         </div>
       </section>
-
-      <BottomBar />
     </main>
   )
 } 
