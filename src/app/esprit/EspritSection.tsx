@@ -10,16 +10,16 @@ export default function EspritSection({
 
   return (
     <section id={section.id} className={cn("py-20")}>
-      <div className="max-w-7xl mx-auto px-4 flex flex-col md:flex-row gap-16 items-center">
+      <div className="max-w-7xl mx-auto px-4 flex flex-col md:flex-row gap-8 md:gap-16 items-center">
           <>
-           <h2 className="text-5xl font-medium mb-6 w-1/3">{section.title}</h2>
-            <div className="w-2/3">
+           <h2 className="text-5xl font-medium mb-6 md:w-1/3">{section.title}</h2>
+            <div className="w-full md:w-2/3">
              
               <p className="text-gray-600 leading-relaxed text-lg">
                 {section.description}
               </p>
             </div>
-            <div className="group overflow-hidden rounded-md w-1/3">
+            <div className="group overflow-hidden rounded-md w-full md:w-1/3">
               <div className="relative transform transition-transform duration-500 group-hover:scale-105">
                 <Image
                   src={section.image}
