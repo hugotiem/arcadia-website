@@ -75,14 +75,9 @@ export default function Navigation() {
             {/* Center Logo Desktop */}
             <div className="flex-shrink-0 transform hover:scale-105 transition-transform duration-300 mx-8">
               <Link href="/" className="block">
-                <Image
-                  src="/logo.svg"
-                  alt="Arcadia"
-                  width={120}
-                  height={40}
-                  className="h-8 w-auto"
-                  priority
-                />
+                <span className="text-gray-800 font-bold text-3xl text-[#344D68]">
+                  ARCADIA
+                </span>
               </Link>
             </div>
 
