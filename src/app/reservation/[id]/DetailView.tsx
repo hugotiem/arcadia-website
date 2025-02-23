@@ -34,7 +34,7 @@ export default function DetailView({ itemId }: { itemId: string }) {
     <div className="min-h-screen bg-white">
       <Navigation />
       
-      <div className="container mx-auto pb-20 pt-32">
+      <div className="mx-auto pb-20 pt-32 max-w-[95em]">
         <div className="relative w-full">
           <motion.div
             layoutId={`card-container-${item.id}`}
@@ -87,9 +87,9 @@ export default function DetailView({ itemId }: { itemId: string }) {
                   initial={{ opacity: 0 }}
                   animate={{ opacity: 1 }}
                   transition={{ delay: 0.3, duration: 0.5 }}
-                  className="prose max-w-none max-w-lg"
+                  className="prose max-w-lg"
                 >
-                  <p className="text-lg">{item.details}</p>
+                  <p className="text-xl">{item.details}</p>
                 </motion.div>
               </div>
             </div>
@@ -109,22 +109,22 @@ export default function DetailView({ itemId }: { itemId: string }) {
         </motion.div>
 
         {/* Additional Sections */}
-        <div className="mt-20 space-y-20">
+        <div className="mt-20 space-y-20 mx-8">
           {/* Liberté et Flexibilité Totale */}
           <motion.section
             ref={section1Ref}
-            className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center"
+            className="flex flex-col md:flex-row gap-8 items-center"
             initial={{ opacity: 0, y: 50 }}
             animate={isSection1InView ? { opacity: 1, y: 0 } : { opacity: 0, y: 50 }}
             transition={{ duration: 0.6 }}
           >
-            <div className="order-2 md:order-1">
-              <h2 className="text-2xl font-light mb-6">LIBERTÉ ET FLEXIBILITÉ TOTALE</h2>
-              <p className="text-gray-600 leading-relaxed">
+            <div className="lg:w-2/3">
+              <h2 className="text-2xl font-medium mb-4 lg:w-2/3">LIBERTÉ ET FLEXIBILITÉ TOTALE</h2>
+              <p className="text-gray-600 text-lg leading-relaxed lg:w-2/3">
                 Le voyage s&apos;en remet à vous et votre voilier vous transporte où que vous mène dans le temps et l&apos;espace selon vos aspirations. Liberté absolue pour naviguer à votre rythme, vous arrêter où bon vous semble. Élégante et sans contrainte, ainsi se déroule une excursion authentique avec le capitaine. Pensez, décidez, nous exécutons. Le programme est le vôtre, la destination est votre choix.
               </p>
             </div>
-            <div className="order-1 md:order-2 relative h-[400px]">
+            <div className="relative aspect-square w-1/2 lg:w-1/3">
               <Image 
                 src="/liberty.jpg" 
                 alt="Liberté en mer" 
@@ -137,12 +137,12 @@ export default function DetailView({ itemId }: { itemId: string }) {
           {/* Une Cuisine d'Exception */}
           <motion.section
             ref={section2Ref}
-            className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center"
+            className="flex flex-col-reverse md:flex-row gap-8 items-center"
             initial={{ opacity: 0, y: 50 }}
             animate={isSection2InView ? { opacity: 1, y: 0 } : { opacity: 0, y: 50 }}
             transition={{ duration: 0.6 }}
           >
-            <div className="relative h-[400px]">
+            <div className="relative aspect-square w-1/2 lg:w-1/3">
               <Image 
                 src="/cuisine.jpg" 
                 alt="Cuisine d&apos;exception" 
@@ -150,9 +150,9 @@ export default function DetailView({ itemId }: { itemId: string }) {
                 className="rounded-lg shadow-xl object-cover" 
               />
             </div>
-            <div>
-              <h2 className="text-2xl font-light mb-6">UNE CUISINE D&apos;EXCEPTION</h2>
-              <p className="text-gray-600 leading-relaxed">
+            <div className="lg:w-2/3 flex flex-col lg:items-end">
+              <h2 className="text-2xl font-medium mb-4 lg:text-right lg:w-2/3">UNE CUISINE D&apos;EXCEPTION</h2>
+              <p className="text-gray-600 text-lg leading-relaxed lg:w-2/3 lg:text-right ">
                 Une cuisine raffinée, préparée à bord par notre chef. Il sublime les produits frais de la mer et du terroir. À la fois délicate et authentique, la gastronomie à bord est un art qui se décline à chaque repas. Nous accordons une attention particulière à vos préférences pour créer des menus sur mesure. Notre chef s&apos;adapte à vos goûts et restrictions alimentaires pour que chaque repas soit un moment de plaisir absolu.
               </p>
             </div>
@@ -161,18 +161,18 @@ export default function DetailView({ itemId }: { itemId: string }) {
           {/* Activités et Découverte */}
           <motion.section
             ref={section3Ref}
-            className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center"
+            className="flex flex-col md:flex-row gap-8 items-center"
             initial={{ opacity: 0, y: 50 }}
             animate={isSection3InView ? { opacity: 1, y: 0 } : { opacity: 0, y: 50 }}
             transition={{ duration: 0.6 }}
           >
-            <div className="order-2 md:order-1">
-              <h2 className="text-2xl font-light mb-6">ACTIVITÉS ET DÉCOUVERTE</h2>
-              <p className="text-gray-600 leading-relaxed">
+            <div className="lg:w-2/3">
+              <h2 className="text-2xl font-medium mb-4 lg:w-2/3">ACTIVITÉS ET DÉCOUVERTE</h2>
+              <p className="text-gray-600 text-lg leading-relaxed lg:w-2/3">
                 Chaque escale est une invitation à de nouvelles découvertes. Profitez des plus belles plages de la Méditerranée, explorez des criques secrètes accessibles uniquement par la mer. Le capitaine et l&apos;équipage vous accompagnent dans vos activités nautiques : paddle, snorkeling, pêche... Découvrez les trésors cachés du littoral et profitez de moments privilégiés en toute intimité.
               </p>
             </div>
-            <div className="order-1 md:order-2 relative h-[400px]">
+            <div className="relative aspect-square w-1/2 lg:w-1/3">
               <Image 
                 src="/activities.jpg" 
                 alt="Activités en mer" 

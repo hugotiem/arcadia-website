@@ -83,7 +83,7 @@ export default function Reservation() {
 
       {/* Experiences Grid */}
       <section className="py-12 md:py-20">
-        <div className="max-w-7xl mx-auto px-4">
+        <div className="max-w-7xl mx-auto md:px-4">
           <Gallery />
 
           {/* Expanded Experience View */}
