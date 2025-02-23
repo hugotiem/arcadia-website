@@ -6,6 +6,7 @@ import Image from 'next/image'
 import { Experience } from '../gallery-data'
 import Gallery from '@/components/Gallery'
 import ReservationForm from '@/components/ReservationForm'
+import BottomBar from '@/components/BottomBar'
 
 export default function Reservation() {
   const [formData, setFormData] = useState({
@@ -57,6 +58,7 @@ export default function Reservation() {
             </div>
           </div>
         </div>
+        <BottomBar />
       </main>
     )
   }
@@ -145,6 +147,8 @@ export default function Reservation() {
           />
         </div>
       </section>
+
+      <BottomBar />
     </main>
   )
 } 

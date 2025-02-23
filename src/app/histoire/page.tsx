@@ -2,6 +2,7 @@
 
 import { useEffect, useRef } from 'react'
 import Navigation from '@/components/Navigation'
+import BottomBar from '@/components/BottomBar'
 import Image from 'next/image'
 
 export default function Histoire() {
@@ -190,6 +191,8 @@ export default function Histoire() {
           </div>
         </section>
       </div>
+
+      <BottomBar />
     </main>
   )
 } 

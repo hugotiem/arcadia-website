@@ -1,4 +1,5 @@
 import Navigation from '@/components/Navigation'
+import BottomBar from '@/components/BottomBar'
 import Image from 'next/image'
 import Link from 'next/link'
 
@@ -29,22 +30,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Social Links */}
-      <section className="py-12 md:pb-20">
-        <div className="max-w-7xl mx-auto px-4">
-          <div className="flex justify-center space-x-8 md:space-x-16">
-            <Link href="#contact" className="text-gray-600 hover:text-gray-800 transition-colors text-sm md:text-base">
-              Contact
-            </Link>
-            <Link href="#instagram" className="text-gray-600 hover:text-gray-800 transition-colors text-sm md:text-base">
-              Instagram
-            </Link>
-            <Link href="#twitter" className="text-gray-600 hover:text-gray-800 transition-colors text-sm md:text-base">
-              Twitter
-            </Link>
-          </div>
-        </div>
-      </section>
+      <BottomBar />
     </main>
   )
 }
