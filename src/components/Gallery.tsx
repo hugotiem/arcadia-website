@@ -6,7 +6,7 @@ import { experiences } from '@/app/gallery-data';
 import { MotionProvider } from '@/app/providers';
 import { useRef } from 'react';
 import { cn } from '@/lib/utils';
-
+import { Experience } from '@/app/gallery-data';
 export default function Gallery() {
   return (
     <MotionProvider>
@@ -19,7 +19,7 @@ export default function Gallery() {
   );
 }
 
-function ExperienceCard({ experience }: { experience: any }) {
+function ExperienceCard({ experience }: { experience: Experience }) {
   const cardRef = useRef(null);
   const isInView = useInView(cardRef, { margin: "-200px" });
 
