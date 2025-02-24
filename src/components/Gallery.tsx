@@ -46,7 +46,7 @@ function ExperienceCard({ experience }: { experience: Experience }) {
             <div className="absolute inset-0 bg-black/30 sm:bg-transparent"></div>
           </div>
 
-          <div className="relative z-10 h-full flex flex-col justify-center p-8">
+          <div className="relative z-10 h-full flex flex-col justify-center p-2">
             <div className="flex flex-row items-center gap-8">
               <h2 className={cn(
                 "text-2xl font-light rotate-180 [writing-mode:vertical-lr] transition-colors duration-500",
@@ -57,7 +57,7 @@ function ExperienceCard({ experience }: { experience: Experience }) {
               </h2>
               
               <div className="flex-1">
-                <div className="bg-transparent sm:bg-transparent p-4 rounded-lg">
+                <div className="bg-transparent sm:bg-transparent p-2 rounded-lg">
                   <p className={cn(
                     "text-sm transition-colors duration-500",
                     isInView ? 'text-white' : 'text-gray-800',
@@ -69,7 +69,7 @@ function ExperienceCard({ experience }: { experience: Experience }) {
               </div>
             </div>
 
-            <div className="absolute bottom-8 right-8">
+            <div className="absolute bottom-0 right-5">
               <span className={cn(
                 "text-4xl font-light transition-colors duration-500",
                 isInView ? 'text-white' : 'text-gray-300',
