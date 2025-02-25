@@ -49,7 +49,7 @@ export const minionPro = localFont({
       style: 'normal',
     },
     {
-      path: '../../public/fonts/MinionPro-SemiBold.otf',
+      path: '../../public/fonts/MinionPro-Semibold.otf',
       weight: '600',
       style: 'normal',
     },
