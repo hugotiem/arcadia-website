@@ -6,7 +6,6 @@ import { useRef } from 'react';
 import Image from 'next/image';
 import ReservationForm from '@/components/ReservationForm'
 import Navigation from '@/components/Navigation'
-import { cn } from '@/lib/utils'
 
 export default function DetailView({ itemId }: { itemId: string }) {
   const item = experiences.find(item => item.id === itemId);

@@ -5,17 +5,16 @@ import Navigation from '@/components/Navigation'
 import Image from 'next/image'
 import { Experience } from '../gallery-data'
 import Gallery from '@/components/Gallery'
-import ReservationForm from '@/components/ReservationForm'
 
 export default function Reservation() {
-  const [formData, setFormData] = useState({
+  const [formData] = useState({
     prenom: '',
     nom: '',
     date: '',
     message: '',
     pays: ''
   })
-  const [isSubmitted, setIsSubmitted] = useState(false)
+  const [isSubmitted] = useState(false)
   const [selectedExperience] = useState<Experience | null>(null)
   const [isExpanded] = useState(false)
   const expandedSectionRef = useRef<HTMLDivElement>(null)
