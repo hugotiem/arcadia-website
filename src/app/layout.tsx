@@ -12,20 +12,21 @@ export const metadata: Metadata = {
   },
 };
 
-export default function RootLayout({
+export default async function RootLayout({
   children,
 }: {
   children: React.ReactNode
 }) {
   return (
+    
     <html lang="en" className={`${customFont.variable}`}>
       <head>
         <link rel="icon" href="/blason.png" />
         <link rel="apple-touch-icon" href="/blason.png" />
       </head>
-      <body className="font-custom antialiased">
+      <body className="font-custom antialiased relative">
         {children}
-        <BottomBar />
+        <BottomBar backgroundColor="transparent" />
       </body>
     </html>
   );

@@ -3,11 +3,11 @@ import Image from 'next/image'
 
 export default function Home() {
   return (
-    <main className="min-h-screen bg-white">
+    <main className="bg-white ">
       <Navigation />
       
       {/* Hero Section */}
-      <section className="relative h-screen">
+      <section className="relative h-screen absolute top-0 left-0 right-0">
         <Image
           src="/hero-boat.jpg"
           alt="Voilier Arcadia"
