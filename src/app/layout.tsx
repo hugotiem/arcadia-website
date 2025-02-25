@@ -63,7 +63,7 @@ export default async function RootLayout({
         <link rel="icon" href="/blason.png" />
         <link rel="apple-touch-icon" href="/blason.png" />
       </head>
-      <body className="font-custom antialiased relative">
+      <body className="font-custom antialiased relative font-mainson-neue-extended">
         {children}
         <BottomBar backgroundColor="transparent" />
       </body>

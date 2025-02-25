@@ -79,7 +79,7 @@ export default function DetailView({ itemId }: { itemId: string }) {
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.6, duration: 0.5 }}
-                className="text-3xl font-medium mb-4 font-minion-pro"
+                className="text-3xl font-bold mb-4 font-minion-pro"
               >
                 {item.title}
               </motion.h1>
@@ -119,7 +119,7 @@ export default function DetailView({ itemId }: { itemId: string }) {
             transition={{ duration: 0.6 }}
           >
             <div className="lg:w-2/3">
-              <h2 className="text-2xl font-medium mb-4 lg:w-2/3 font-minion-pro">LIBERTÉ ET FLEXIBILITÉ TOTALE</h2>
+              <h2 className="text-2xl font-bold mb-4 lg:w-2/3 font-minion-pro">LIBERTÉ ET FLEXIBILITÉ TOTALE</h2>
               <p className="text-gray-600 text-lg leading-relaxed lg:w-2/3">
                 Le voyage s&apos;en remet à vous et votre voilier vous transporte où que vous mène dans le temps et l&apos;espace selon vos aspirations. Liberté absolue pour naviguer à votre rythme, vous arrêter où bon vous semble. Élégante et sans contrainte, ainsi se déroule une excursion authentique avec le capitaine. Pensez, décidez, nous exécutons. Le programme est le vôtre, la destination est votre choix.
               </p>
@@ -151,7 +151,7 @@ export default function DetailView({ itemId }: { itemId: string }) {
               />
             </div>
             <div className="lg:w-2/3 flex flex-col lg:items-end">
-              <h2 className="text-2xl font-medium mb-4 lg:text-right lg:w-2/3 font-minion-pro">UNE CUISINE D&apos;EXCEPTION</h2>
+              <h2 className="text-2xl font-bold mb-4 lg:text-right lg:w-2/3 font-minion-pro">UNE CUISINE D&apos;EXCEPTION</h2>
               <p className="text-gray-600 text-lg leading-relaxed lg:w-2/3 lg:text-right ">
                 Une cuisine raffinée, préparée à bord par notre chef. Il sublime les produits frais de la mer et du terroir. À la fois délicate et authentique, la gastronomie à bord est un art qui se décline à chaque repas. Nous accordons une attention particulière à vos préférences pour créer des menus sur mesure. Notre chef s&apos;adapte à vos goûts et restrictions alimentaires pour que chaque repas soit un moment de plaisir absolu.
               </p>
@@ -167,7 +167,7 @@ export default function DetailView({ itemId }: { itemId: string }) {
             transition={{ duration: 0.6 }}
           >
             <div className="lg:w-2/3">
-              <h2 className="text-2xl font-medium mb-4 lg:w-2/3 font-minion-pro">ACTIVITÉS ET DÉCOUVERTE</h2>
+              <h2 className="text-2xl font-bold mb-4 lg:w-2/3 font-minion-pro">ACTIVITÉS ET DÉCOUVERTE</h2>
               <p className="text-gray-600 text-lg leading-relaxed lg:w-2/3">
                 Chaque escale est une invitation à de nouvelles découvertes. Profitez des plus belles plages de la Méditerranée, explorez des criques secrètes accessibles uniquement par la mer. Le capitaine et l&apos;équipage vous accompagnent dans vos activités nautiques : paddle, snorkeling, pêche... Découvrez les trésors cachés du littoral et profitez de moments privilégiés en toute intimité.
               </p>
@@ -188,7 +188,7 @@ export default function DetailView({ itemId }: { itemId: string }) {
         <section className="py-12 md:py-20 bg-white">
           <div className="max-w-3xl mx-auto px-4">
             <div className="text-center mb-12">
-              <h2 className="text-4xl font-medium mb-6 font-minion-pro">Réserver cette expérience</h2>
+              <h2 className="text-4xl font-bold mb-6 font-minion-pro">Réserver cette expérience</h2>
               <p className="text-gray-600">
                 Vous souhaitez vivre cette expérience ? Écrivez nous et planifions ensemble votre navigation.
               </p>

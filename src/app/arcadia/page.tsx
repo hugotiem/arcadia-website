@@ -22,7 +22,7 @@ export default function Arcadia() {
       {/* Section En Construction */}
       <section className="pt-32 pb-16">
         <div className="max-w-4xl mx-auto px-4 text-center">
-          <h1 className="text-4xl font-medium mb-8 opacity-0 animate-[fadeInDown_1s_ease-out_forwards] font-minion-pro">
+          <h1 className="text-4xl font-bold mb-8 opacity-0 animate-[fadeInDown_1s_ease-out_forwards] font-minion-pro">
             L&apos;Arcadia
           </h1>
           <div className="flex flex-col items-center justify-center space-y-6">

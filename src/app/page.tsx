@@ -46,14 +46,14 @@ export default function Home() {
                 alt="Blason Arcadia"
                 width={576}
                 height={576}
-                className="object-contain transition-transform duration-500 group-hover:scale-110"
+                className="object-contain "
                 quality={100}
                 priority
               />
             </div>
-            <p className="text-lg md:text-xl font-light opacity-0 animate-[fadeInUp_1s_ease-out_0.5s_forwards]">
+            {/* <p className="text-lg md:text-xl font-light opacity-0 animate-[fadeInUp_1s_ease-out_0.5s_forwards]">
               Une expérience unique à la voile
-            </p>
+            </p> */}
           </div>
         </div>
       </section>
