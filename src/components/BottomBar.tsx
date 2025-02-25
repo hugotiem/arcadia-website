@@ -10,7 +10,7 @@ export default function BottomBar() {
       <section className="py-8">
         <div className="max-w-7xl mx-auto px-4">
           <div className="flex justify-end items-center space-x-8">
-            <Link href="#contact" className="text-gray-600 hover:text-gray-800 transition-colors text-sm">
+            <Link href="/contact" className="text-gray-600 hover:text-gray-800 transition-colors text-sm">
               Contact
             </Link>
             <div className="h-4 w-px bg-gray-200" />
