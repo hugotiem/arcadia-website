@@ -45,7 +45,7 @@ export default function Histoire() {
         <div className="max-w-4xl mx-auto px-4 text-center">
           <h1 
             ref={setRef(0)}
-            className="text-4xl font-bold mb-8 animate-on-scroll"
+            className="text-4xl font-semibold mb-8 font-minion-pro animate-on-scroll"
             data-animation="animate-fade-up"
           >
             Une Expérience Maritime d&apos;Exception
@@ -73,7 +73,7 @@ export default function Histoire() {
             className="animate-on-scroll h-fit"
             data-animation="animate-slide-right"
           >
-            <h2 className="text-3xl font-bold mb-6">La Famille Blanchard Dignac</h2>
+            <h2 className="text-3xl font-bold mb-6 font-minion-pro">La Famille Blanchard Dignac</h2>
             <h3 className="text-lg text-gray-500 mb-8 font-bold">Une Histoire de Marins, d&apos;Aventuriers et de Passionnés</h3>
             <p className="text-gray-600 leading-relaxed text-justify">
               La famille Blanchard Dignac, originaire du Sud-Ouest de la France,
@@ -129,7 +129,7 @@ export default function Histoire() {
             data-animation="animate-slide-left"
           >
             <div className="text-right">
-              <h2 className="text-3xl font-bold mb-6">Le Château de Lurs</h2>
+              <h2 className="text-3xl font-bold mb-6 font-minion-pro">Le Château de Lurs</h2>
               <h3 className="text-lg text-gray-500 mb-8 font-bold">Un Lieu d&apos;Art et de Création</h3>
               <p className="text-gray-600 leading-relaxed text-justify">
                 Le Château de Lurs, un ancien fort médiéval niché sur les hauteurs de
@@ -158,7 +158,7 @@ export default function Histoire() {
             className="animate-on-scroll h-fit"
             data-animation="animate-slide-right"
           >
-            <h2 className="text-3xl font-bold mb-6">L&apos;École d&apos;Art</h2>
+            <h2 className="text-3xl font-bold mb-6 font-minion-pro">L&apos;École d&apos;Art</h2>
             <h3 className="text-lg text-gray-500 mb-8 font-bold">Financer l&apos;Avenir du Beau</h3>
             <p className="text-gray-600 leading-relaxed text-justify">
               La famille Blanchard Dignac accorde une importance capitale à

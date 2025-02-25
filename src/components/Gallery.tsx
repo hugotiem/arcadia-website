@@ -49,9 +49,9 @@ function ExperienceCard({ experience }: { experience: Experience }) {
           <div className="relative z-10 h-full flex flex-col justify-end p-2">
             <div className="flex flex-row items-end gap-8 translate-y-[-100px]">
               <h2 className={cn(
-                "text-2xl font-medium rotate-180 [writing-mode:vertical-lr] transition-colors duration-500",
+                "text-3xl font-medium rotate-180 [writing-mode:vertical-lr] transition-colors duration-500",
                 isInView ? 'text-white' : 'text-gray-800',
-                'sm:text-gray-800 sm:group-hover:text-white'
+                'sm:text-gray-800 sm:group-hover:text-white font-minion-pro'
               )}>
                 {experience.title}
               </h2>
@@ -74,7 +74,7 @@ function ExperienceCard({ experience }: { experience: Experience }) {
               <span className={cn(
                 "text-4xl font-light transition-colors duration-500",
                 isInView ? 'text-white' : 'text-gray-300',
-                'sm:text-gray-300 sm:group-hover:text-white transition-opacity duration-200'
+                'sm:text-gray-500 sm:group-hover:text-white transition-opacity duration-200 font-minion-pro'
               )}>
                 {experience.id}
               </span>

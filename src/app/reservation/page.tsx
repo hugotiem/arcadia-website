@@ -68,7 +68,7 @@ export default function Reservation() {
       {/* Introduction Section */}
       <section className="pt-32 pb-12 md:pb-16">
         <div className="max-w-4xl mx-auto px-4 text-center">
-          <h1 className="text-3xl md:text-4xl font-light mb-6 md:mb-8 opacity-0 animate-[fadeInDown_1s_ease-out_forwards]">
+          <h1 className="text-3xl md:text-4xl font-medium mb-6 md:mb-8 opacity-0 animate-[fadeInDown_1s_ease-out_forwards] font-minion-pro">
             Une Expérience Maritime d&apos;Exception
           </h1>
           <p className="text-gray-600 leading-relaxed opacity-0 animate-[fadeInUp_1s_ease-out_0.5s_forwards] text-sm md:text-base">
@@ -126,9 +126,9 @@ export default function Reservation() {
       </section>
 
       {/* add a divider */}
-      <div className="h-[1px] bg-gray-500 mt-20" />
+      {/* <div className="h-[1px] bg-gray-500 mt-20" /> */}
       {/* Reservation Form */}
-      <section className="py-12 md:py-20">
+      {/* <section className="py-12 md:py-20">
         <div className="max-w-3xl mx-auto px-4">
           <div className="text-center mb-12">
             <h2 className="text-4xl font-light mb-6">Réservation</h2>
@@ -144,7 +144,7 @@ export default function Reservation() {
             }} 
           />
         </div>
-      </section>
+      </section> */}
     </main>
   )
 } 

@@ -49,36 +49,29 @@ export default function DetailView({ itemId }: { itemId: string }) {
                     layoutId={`card-content-${item.id}`}
                     className="flex flex-row items-center gap-8"
                   >
-                    <h2 className="text-[6vw] md:text-[2vw] font-light rotate-180 [writing-mode:vertical-lr] text-white">
+                    <h2 className="text-[6vw] md:text-[2vw] font-light rotate-180 [writing-mode:vertical-lr] text-white font-minion-pro">
                       {item.title}
                     </h2>
                   </motion.div>
-                  <div className="absolute bottom-4 right-4">
-                    <span className="text-[8vw] md:text-[3vw] font-light text-white">
+                  <div className="absolute bottom-0 right-8">
+                    <span className="text-[8vw] md:text-[3vw] font-light text-white font-minion-pro">
                       {item.id}
                     </span>
                   </div>
                 </div>
                 
                 {/* Image */}
-                <div className={cn(
-                  "absolute inset-0 transition-all duration-700",
-                  isSection1InView ? 'opacity-100' : 'opacity-0 sm:opacity-0',
-                  'sm:opacity-0 sm:group-hover:opacity-100'
-                )}>
-                  <motion.div
-                    layoutId={`card-image-${item.id}`}
-                    className="relative h-full"
-                  >
-                    <Image
-                      src={item.image}
-                      alt={item.title}
-                      fill
-                      className="object-cover h-full w-full"
-                    />
-                  </motion.div>
-                  <div className="absolute inset-0 bg-black/30 sm:bg-transparent"></div>
-                </div>
+                <motion.div
+                  layoutId={`card-image-${item.id}`}
+                  className="relative h-full"
+                >
+                  <img
+                    src={item.image}
+                    alt={item.title}
+                    className="object-cover h-full w-full"
+                  />
+                </motion.div>
+                <div className="absolute inset-0 bg-black/30 sm:bg-transparent"></div>
               </div>
               
               {/* Description content */}
@@ -87,7 +80,7 @@ export default function DetailView({ itemId }: { itemId: string }) {
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.6, duration: 0.5 }}
-                className="text-3xl font-bold mb-4"
+                className="text-3xl font-medium mb-4 font-minion-pro"
               >
                 {item.title}
               </motion.h1>
@@ -97,7 +90,7 @@ export default function DetailView({ itemId }: { itemId: string }) {
                   transition={{ delay: 0.3, duration: 0.5 }}
                   className="prose max-w-lg"
                 >
-                  <p className="text-xl">{item.details}</p>
+                  <p className="text-xl text-gray-600 ">{item.details}</p>
                 </motion.div>
               </div>
             </div>
@@ -127,7 +120,7 @@ export default function DetailView({ itemId }: { itemId: string }) {
             transition={{ duration: 0.6 }}
           >
             <div className="lg:w-2/3">
-              <h2 className="text-2xl font-medium mb-4 lg:w-2/3">LIBERTÉ ET FLEXIBILITÉ TOTALE</h2>
+              <h2 className="text-2xl font-medium mb-4 lg:w-2/3 font-minion-pro">LIBERTÉ ET FLEXIBILITÉ TOTALE</h2>
               <p className="text-gray-600 text-lg leading-relaxed lg:w-2/3">
                 Le voyage s&apos;en remet à vous et votre voilier vous transporte où que vous mène dans le temps et l&apos;espace selon vos aspirations. Liberté absolue pour naviguer à votre rythme, vous arrêter où bon vous semble. Élégante et sans contrainte, ainsi se déroule une excursion authentique avec le capitaine. Pensez, décidez, nous exécutons. Le programme est le vôtre, la destination est votre choix.
               </p>
@@ -159,7 +152,7 @@ export default function DetailView({ itemId }: { itemId: string }) {
               />
             </div>
             <div className="lg:w-2/3 flex flex-col lg:items-end">
-              <h2 className="text-2xl font-medium mb-4 lg:text-right lg:w-2/3">UNE CUISINE D&apos;EXCEPTION</h2>
+              <h2 className="text-2xl font-medium mb-4 lg:text-right lg:w-2/3 font-minion-pro">UNE CUISINE D&apos;EXCEPTION</h2>
               <p className="text-gray-600 text-lg leading-relaxed lg:w-2/3 lg:text-right ">
                 Une cuisine raffinée, préparée à bord par notre chef. Il sublime les produits frais de la mer et du terroir. À la fois délicate et authentique, la gastronomie à bord est un art qui se décline à chaque repas. Nous accordons une attention particulière à vos préférences pour créer des menus sur mesure. Notre chef s&apos;adapte à vos goûts et restrictions alimentaires pour que chaque repas soit un moment de plaisir absolu.
               </p>
@@ -175,7 +168,7 @@ export default function DetailView({ itemId }: { itemId: string }) {
             transition={{ duration: 0.6 }}
           >
             <div className="lg:w-2/3">
-              <h2 className="text-2xl font-medium mb-4 lg:w-2/3">ACTIVITÉS ET DÉCOUVERTE</h2>
+              <h2 className="text-2xl font-medium mb-4 lg:w-2/3 font-minion-pro">ACTIVITÉS ET DÉCOUVERTE</h2>
               <p className="text-gray-600 text-lg leading-relaxed lg:w-2/3">
                 Chaque escale est une invitation à de nouvelles découvertes. Profitez des plus belles plages de la Méditerranée, explorez des criques secrètes accessibles uniquement par la mer. Le capitaine et l&apos;équipage vous accompagnent dans vos activités nautiques : paddle, snorkeling, pêche... Découvrez les trésors cachés du littoral et profitez de moments privilégiés en toute intimité.
               </p>
@@ -196,7 +189,7 @@ export default function DetailView({ itemId }: { itemId: string }) {
         <section className="py-12 md:py-20 bg-white">
           <div className="max-w-3xl mx-auto px-4">
             <div className="text-center mb-12">
-              <h2 className="text-4xl font-light mb-6">Réserver cette expérience</h2>
+              <h2 className="text-4xl font-medium mb-6 font-minion-pro">Réserver cette expérience</h2>
               <p className="text-gray-600">
                 Vous souhaitez vivre cette expérience ? Écrivez nous et planifions ensemble votre navigation.
               </p>

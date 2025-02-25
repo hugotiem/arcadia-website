@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import "./globals.css";
-import { customFont } from './fonts'
+import { mainsonNeueExtended, minionPro } from './fonts'
 import BottomBar from '@/components/BottomBar'
 
 export const metadata: Metadata = {
@@ -58,7 +58,7 @@ export default async function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="fr" className={`${customFont.variable}`}>
+    <html lang="fr" className={`${minionPro.variable} ${mainsonNeueExtended.variable}`}>
       <head>
         <link rel="icon" href="/blason.png" />
         <link rel="apple-touch-icon" href="/blason.png" />

@@ -12,7 +12,7 @@ export default function EspritSection({
     <section id={section.id} className={cn("py-20")}>
       <div className="max-w-7xl mx-auto px-4 flex flex-col md:flex-row gap-8 md:gap-16 items-center">
           <>
-           <h2 className="text-5xl font-medium mb-6 md:w-1/3">{section.title}</h2>
+           <h2 className="text-5xl font-medium mb-6 md:w-1/3 font-minion-pro">{section.title}</h2>
             <div className="w-full md:w-2/3">
              
               <p className="text-gray-600 leading-relaxed text-lg">

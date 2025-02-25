@@ -21,7 +21,7 @@ export default function Contact() {
       
       <section className="pt-32 pb-16">
         <div className="max-w-2xl mx-auto px-4 text-center">
-          <h1 className="text-4xl font-light mb-12 opacity-0 animate-[fadeInDown_1s_ease-out_forwards]">
+          <h1 className="text-4xl font-medium mb-12 opacity-0 animate-[fadeInDown_1s_ease-out_forwards] font-minion-pro">
             Contact
           </h1>
           

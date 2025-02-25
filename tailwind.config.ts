@@ -12,6 +12,10 @@ export default {
         background: "var(--background)",
         foreground: "var(--foreground)",
       },
+      fontFamily: {
+        "mainson-neue-extended": ['var(--font-mainson-neue-extended)'],
+        "minion-pro": ['var(--font-minion-pro)'],
+      },
     },
   },
   plugins: [],
