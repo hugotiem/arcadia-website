@@ -34,7 +34,7 @@ export default function DetailView({ itemId }: { itemId: string }) {
     <div className="min-h-screen bg-white">
       <Navigation />
       
-      <div className="mx-auto pb-20 pt-32 max-w-[95em]">
+      <div className="mx-auto pb-20 pt-16  max-w-[95em]">
         <div className="relative w-full">
           <motion.div
             layoutId={`card-container-${item.id}`}
