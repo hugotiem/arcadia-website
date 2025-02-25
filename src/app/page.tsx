@@ -1,5 +1,27 @@
 import Navigation from '@/components/Navigation'
 import Image from 'next/image'
+import type { Metadata } from 'next'
+
+export const metadata: Metadata = {
+  title: 'Arcadia - Voilier de luxe en Méditerranée',
+  description: 'Découvrez l\'Arcadia, voilier de luxe proposant des expériences uniques en Méditerranée. Navigation d\'exception, service personnalisé et moments inoubliables.',
+  openGraph: {
+    title: 'Arcadia - Voilier de luxe en Méditerranée',
+    description: 'Découvrez l\'Arcadia, voilier de luxe proposant des expériences uniques en Méditerranée. Navigation d\'exception, service personnalisé et moments inoubliables.',
+    url: 'https://navire-arcadia.com',
+    siteName: 'Arcadia - Voilier de luxe',
+    locale: 'fr_FR',
+    type: 'website',
+    images: [
+      {
+        url: '/hero-boat.jpg',
+        width: 1200,
+        height: 630,
+        alt: 'Voilier Arcadia en Méditerranée',
+      }
+    ],
+  },
+}
 
 export default function Home() {
   return (

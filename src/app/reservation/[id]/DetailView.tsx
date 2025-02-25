@@ -6,6 +6,7 @@ import { useRef } from 'react';
 import Image from 'next/image';
 import ReservationForm from '@/components/ReservationForm'
 import Navigation from '@/components/Navigation'
+import { cn } from '@/lib/utils'
 
 export default function DetailView({ itemId }: { itemId: string }) {
   const item = experiences.find(item => item.id === itemId);
@@ -60,17 +61,24 @@ export default function DetailView({ itemId }: { itemId: string }) {
                 </div>
                 
                 {/* Image */}
-                <motion.div 
-                  layoutId={`card-image-${item.id}`}
-                  className="relative "
-                >
-                  <img
-                    src={item.image}
-                    alt={item.title}
-                    className="w-full h-full object-cover"
-                  />
-                  <div className="absolute inset-0 bg-black/30" />
-                </motion.div>
+                <div className={cn(
+                  "absolute inset-0 transition-all duration-700",
+                  isSection1InView ? 'opacity-100' : 'opacity-0 sm:opacity-0',
+                  'sm:opacity-0 sm:group-hover:opacity-100'
+                )}>
+                  <motion.div
+                    layoutId={`card-image-${item.id}`}
+                    className="relative h-full"
+                  >
+                    <Image
+                      src={item.image}
+                      alt={item.title}
+                      fill
+                      className="object-cover h-full w-full"
+                    />
+                  </motion.div>
+                  <div className="absolute inset-0 bg-black/30 sm:bg-transparent"></div>
+                </div>
               </div>
               
               {/* Description content */}
