@@ -4,10 +4,9 @@ import Link from 'next/link'
 import { usePathname } from 'next/navigation'
 interface BottomBarProps {
   backgroundColor?: string;
-  position?: 'fixed' | 'absolute';
 }
 
-export default function BottomBar({ backgroundColor, position }: BottomBarProps) {
+export default function BottomBar({ backgroundColor }: BottomBarProps) {
 
     const pathname = usePathname()
 

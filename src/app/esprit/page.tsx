@@ -2,6 +2,20 @@ import Navigation from '@/components/Navigation'
 import { espritSections } from './esprit-data'
 import EspritSection from './EspritSection'
 import Link from 'next/link'
+import type { Metadata } from 'next'
+
+export const metadata: Metadata = {
+  title: 'L\'Esprit | Arcadia - Voilier de luxe',
+  description: 'Découvrez l\'esprit Arcadia : excellence française, art de vivre, gastronomie raffinée et service sur-mesure à bord de notre voilier de luxe.',
+  openGraph: {
+    title: 'L\'Esprit | Arcadia - Voilier de luxe',
+    description: 'Découvrez l\'esprit Arcadia : excellence française, art de vivre, gastronomie raffinée et service sur-mesure à bord de notre voilier de luxe.',
+    url: 'https://navire-arcadia.com/esprit',
+    siteName: 'Arcadia - Voilier de luxe',
+    locale: 'fr_FR',
+    type: 'article',
+  },
+}
 
 export default function Esprit() {
   return (

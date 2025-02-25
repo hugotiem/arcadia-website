@@ -1,4 +1,18 @@
 import Navigation from '@/components/Navigation'
+import type { Metadata } from 'next'
+
+export const metadata: Metadata = {
+  title: 'Contact | Arcadia - Voilier de luxe',
+  description: 'Contactez-nous pour organiser votre séjour à bord de l\'Arcadia. Port d\'attache à Sète, visites sur rendez-vous.',
+  openGraph: {
+    title: 'Contact | Arcadia - Voilier de luxe',
+    description: 'Contactez-nous pour organiser votre séjour à bord de l\'Arcadia. Port d\'attache à Sète, visites sur rendez-vous.',
+    url: 'https://navire-arcadia.com/contact',
+    siteName: 'Arcadia - Voilier de luxe',
+    locale: 'fr_FR',
+    type: 'website',
+  },
+}
 
 export default function Contact() {
   return (
