@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import "./globals.css";
 import { mainsonNeueExtended, minionPro } from './fonts'
 import BottomBar from '@/components/BottomBar'
-
+import Navigation from "@/components/Navigation";
 export const metadata: Metadata = {
   metadataBase: new URL('https://navire-arcadia.com'),
   title: {
@@ -64,6 +64,7 @@ export default async function RootLayout({
         <link rel="apple-touch-icon" href="/blason.png" />
       </head>
       <body className="font-custom antialiased relative font-mainson-neue-extended">
+        <Navigation />
         {children}
         <BottomBar backgroundColor="transparent" />
       </body>

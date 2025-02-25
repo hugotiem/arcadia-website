@@ -1,4 +1,3 @@
-import Navigation from '@/components/Navigation'
 import { espritSections } from './esprit-data'
 import EspritSection from './EspritSection'
 import Link from 'next/link'
@@ -19,8 +18,7 @@ export const metadata: Metadata = {
 
 export default function Esprit() {
   return (
-    <main className="min-h-screen bg-white">
-      <Navigation />
+    <main className="min-h-screen bg-white max-w-[90rem] mx-auto">
       
       {/* Header Section */}
       <section className="pt-32 pb-16">

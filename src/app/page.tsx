@@ -1,4 +1,3 @@
-import Navigation from '@/components/Navigation'
 import Image from 'next/image'
 import type { Metadata } from 'next'
 
@@ -26,7 +25,6 @@ export const metadata: Metadata = {
 export default function Home() {
   return (
     <main className="bg-white ">
-      <Navigation />
       
       {/* Hero Section */}
       <section className="relative h-screen absolute top-0 left-0 right-0">

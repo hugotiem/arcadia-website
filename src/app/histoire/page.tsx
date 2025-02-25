@@ -1,7 +1,6 @@
 'use client'
 
 import { useEffect, useRef } from 'react'
-import Navigation from '@/components/Navigation'
 import Image from 'next/image'
 
 export default function Histoire() {
@@ -38,8 +37,6 @@ export default function Histoire() {
 
   return (
     <main className="min-h-screen bg-white">
-      <Navigation />
-      
       {/* Header Section */}
       <section className="pt-32 pb-16">
         <div className="max-w-4xl mx-auto px-4 text-center">

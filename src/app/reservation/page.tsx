@@ -1,7 +1,6 @@
 'use client'
 
 import { useState, useRef } from 'react'
-import Navigation from '@/components/Navigation'
 import Image from 'next/image'
 import { Experience } from '../gallery-data'
 import Gallery from '@/components/Gallery'
@@ -31,7 +30,6 @@ export default function Reservation() {
   if (isSubmitted) {
     return (
       <main className="min-h-screen bg-white">
-        <Navigation />
         <div className="pt-32 pb-16">
           <div className="max-w-3xl mx-auto px-4 text-center">
             <div className="animate-[fadeInDown_1s_ease-out_forwards] opacity-0">
@@ -62,7 +60,6 @@ export default function Reservation() {
 
   return (
     <main className="min-h-screen bg-white">
-      <Navigation />
 
       {/* Introduction Section */}
       <section className="pt-32 pb-12 md:pb-16">

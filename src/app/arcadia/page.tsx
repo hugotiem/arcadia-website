@@ -1,4 +1,3 @@
-import Navigation from '@/components/Navigation'
 import type { Metadata } from 'next'
 
 export const metadata: Metadata = {
@@ -17,7 +16,6 @@ export const metadata: Metadata = {
 export default function Arcadia() {
   return (
     <main className="min-h-screen bg-white">
-      <Navigation />
       
       {/* Section En Construction */}
       <section className="pt-32 pb-16">

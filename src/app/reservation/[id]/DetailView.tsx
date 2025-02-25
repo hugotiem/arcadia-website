@@ -5,7 +5,6 @@ import { experiences } from '@/app/gallery-data';
 import { useRef } from 'react';
 import Image from 'next/image';
 import ReservationForm from '@/components/ReservationForm'
-import Navigation from '@/components/Navigation'
 
 export default function DetailView({ itemId }: { itemId: string }) {
   const item = experiences.find(item => item.id === itemId);
@@ -21,7 +20,6 @@ export default function DetailView({ itemId }: { itemId: string }) {
   if (!item) {
     return (
       <>
-      <Navigation />
       <div className="text-center py-8">
         <h1 className="text-2xl font-bold">Item not found</h1>
         <p className="text-gray-600">The item you are looking for does not exist.</p>
@@ -32,7 +30,6 @@ export default function DetailView({ itemId }: { itemId: string }) {
   
   return (
     <div className="min-h-screen bg-white">
-      <Navigation />
       
       <div className="mx-auto pb-20 pt-16  max-w-[95em]">
         <div className="relative w-full">

@@ -1,4 +1,3 @@
-import Navigation from '@/components/Navigation'
 import type { Metadata } from 'next'
 
 export const metadata: Metadata = {
@@ -17,7 +16,6 @@ export const metadata: Metadata = {
 export default function Contact() {
   return (
     <main className="min-h-screen bg-white">
-      <Navigation />
       
       <section className="pt-32 pb-16">
         <div className="max-w-2xl mx-auto px-4 text-center">
