@@ -121,7 +121,7 @@ export default function DetailView({ itemId }: { itemId: string }) {
                 Le voyage s&apos;en remet à vous et votre voilier vous transporte où que vous mène dans le temps et l&apos;espace selon vos aspirations. Liberté absolue pour naviguer à votre rythme, vous arrêter où bon vous semble. Élégante et sans contrainte, ainsi se déroule une excursion authentique avec le capitaine. Pensez, décidez, nous exécutons. Le programme est le vôtre, la destination est votre choix.
               </p>
             </div>
-            <div className="relative aspect-square w-1/2 lg:w-1/3">
+            <div className="relative aspect-square w-full md:w-1/2 lg:w-1/3">
               <Image 
                 src="/liberty.jpg" 
                 alt="Liberté en mer" 
@@ -139,10 +139,10 @@ export default function DetailView({ itemId }: { itemId: string }) {
             animate={isSection2InView ? { opacity: 1, y: 0 } : { opacity: 0, y: 50 }}
             transition={{ duration: 0.6 }}
           >
-            <div className="relative aspect-square w-1/2 lg:w-1/3">
+            <div className="relative aspect-square w-full md:w-1/2 lg:w-1/3">
               <Image 
                 src="/cuisine.jpg" 
-                alt="Cuisine d&apos;exception" 
+                alt="Cuisine d'exception" 
                 fill
                 className="rounded-lg shadow-xl object-cover" 
               />
@@ -169,7 +169,7 @@ export default function DetailView({ itemId }: { itemId: string }) {
                 Chaque escale est une invitation à de nouvelles découvertes. Profitez des plus belles plages de la Méditerranée, explorez des criques secrètes accessibles uniquement par la mer. Le capitaine et l&apos;équipage vous accompagnent dans vos activités nautiques : paddle, snorkeling, pêche... Découvrez les trésors cachés du littoral et profitez de moments privilégiés en toute intimité.
               </p>
             </div>
-            <div className="relative aspect-square w-1/2 lg:w-1/3">
+            <div className="relative aspect-square w-full md:w-1/2 lg:w-1/3">
               <Image 
                 src="/activities.jpg" 
                 alt="Activités en mer" 

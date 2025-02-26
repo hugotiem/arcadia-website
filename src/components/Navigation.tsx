@@ -22,7 +22,7 @@ export default function Navigation() {
             <div className="flex-shrink-0 transform hover:scale-105 transition-transform duration-300">
               <Link href="/" className="block">
                 <Image
-                  src="/logo.svg"
+                  src="/logo.png"
                   alt="Arcadia"
                   width={120}
                   height={40}
