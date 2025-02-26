@@ -29,7 +29,7 @@ function ExperienceCard({ experience }: { experience: Experience }) {
         <motion.div
           ref={cardRef}
           layoutId={`card-container-${experience.id}`}
-          className="group relative w-screen sm:w-auto aspect-[9/14] sm:aspect-auto sm:h-[600px] border-b sm:border-b-0 sm:border-r border-gray-100 last:border-r-0"
+          className="group relative w-screen sm:w-auto aspect-[9/14] border-b sm:border-b-0 sm:border-r border-gray-100 last:border-r-0"
           initial={{ opacity: 1 }}
         >
           <div className={cn(

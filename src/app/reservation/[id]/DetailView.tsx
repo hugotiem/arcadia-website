@@ -45,12 +45,12 @@ export default function DetailView({ itemId }: { itemId: string }) {
                     layoutId={`card-content-${item.id}`}
                     className="flex flex-row items-center gap-8"
                   >
-                    <h2 className="text-[6vw] md:text-[2vw] font-light rotate-180 [writing-mode:vertical-lr] text-white font-minion-pro">
+                    <h2 className="text-[min(8vw,3.5rem)] md:text-[min(4vw,3rem)] xl:text-[min(3.5vw,3.5rem)] font-light rotate-180 [writing-mode:vertical-lr] text-white font-minion-pro">
                       {item.title}
                     </h2>
                   </motion.div>
                   <div className="absolute bottom-0 right-8">
-                    <span className="text-[8vw] md:text-[3vw] font-light text-white font-minion-pro">
+                    <span className="text-[min(10vw,5rem)] md:text-[min(6vw,4.5rem)] xl:text-[min(5vw,5rem)] font-light text-white font-minion-pro">
                       {item.id}
                     </span>
                   </div>
