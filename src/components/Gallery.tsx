@@ -25,13 +25,14 @@ function ExperienceCard({ experience }: { experience: Experience }) {
 
   return (
     <Link href={`/reservation/${experience.id}`} className="block">
-      <div className="relative cursor-pointer w-full sm:border-l border-gray-600">
+      <div className="relative cursor-pointer w-full sm:border-l overflow-hidden">
         <motion.div
           ref={cardRef}
           layoutId={`card-container-${experience.id}`}
-          className="group relative w-screen sm:w-auto aspect-[9/14] border-b sm:border-b-0 sm:border-r border-gray-100 last:border-r-0"
+          className="group relative flex w-screen sm:w-auto aspect-[9/12]"
           initial={{ opacity: 1 }}
         >
+        <div className='h-full w-1 bg-gray-600 group-hover:bg-white transition-[background-color] duration-300'/>
           <div className={cn(
             "absolute inset-0 transition-all duration-700",
             isInView ? 'opacity-100' : 'opacity-0 sm:opacity-0',
@@ -47,7 +48,7 @@ function ExperienceCard({ experience }: { experience: Experience }) {
           </div>
 
           <div className="relative z-10 h-full flex flex-col justify-end p-2">
-            <div className="flex flex-row items-end gap-8 translate-y-[-100px]">
+            <div className="flex flex-row items-end gap-8 mb-8">
               <h2 className={cn(
                 "text-3xl font-bold rotate-180 [writing-mode:vertical-lr] transition-colors duration-500",
                 isInView ? 'text-white' : 'text-gray-800',
@@ -72,9 +73,9 @@ function ExperienceCard({ experience }: { experience: Experience }) {
 
             <div className="absolute bottom-0 right-5">
               <span className={cn(
-                "text-4xl font-light transition-colors duration-500",
+                "text-2xl transition-colors duration-500",
                 isInView ? 'text-white' : 'text-gray-300',
-                'sm:text-gray-500 sm:group-hover:text-white transition-opacity duration-200 font-minion-pro'
+                'sm:text-gray-600 sm:group-hover:text-white transition-opacity duration-200'
               )}>
                 {experience.id}
               </span>
