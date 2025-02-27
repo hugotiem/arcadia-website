@@ -21,7 +21,7 @@ export default function Contact() {
       <Navigation />
       
       <section className="pt-32 pb-16">
-        <div className="max-w-xl mx-auto px-4">
+        <div className="max-w-xl mx-auto px-4 text-center">
           <h1 className={`text-2xl mb-16 ${mainsonNeueExtended.className} font-medium`}>
             CONTACT
           </h1>
