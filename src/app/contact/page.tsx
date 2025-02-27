@@ -1,4 +1,6 @@
 import type { Metadata } from 'next'
+import Navigation from '@/components/Navigation'
+import { mainsonNeueExtended } from '../fonts'
 
 export const metadata: Metadata = {
   title: 'Contact | Arcadia - Voilier de luxe',
@@ -16,8 +18,10 @@ export const metadata: Metadata = {
 export default function Contact() {
   return (
     <main className="min-h-screen bg-white">
+      <Navigation />
       
       <section className="pt-32 pb-16">
+<<<<<<< HEAD
         <div className="max-w-2xl mx-auto px-4 text-center">
           <h1 className="text-4xl font-bold mb-12 opacity-0 animate-[fadeInDown_1s_ease-out_forwards] font-minion-pro">
             Contact
@@ -31,22 +35,32 @@ export default function Contact() {
                 Port de Sète<br />
                 Sète, 34200<br />
                 France
+=======
+        <div className="max-w-xl mx-auto px-4">
+          <h1 className={`text-2xl mb-16 ${mainsonNeueExtended.className} font-medium`}>
+            CONTACT
+          </h1>
+          
+          <div className={`space-y-8 ${mainsonNeueExtended.className}`}>
+            <div className="space-y-2">
+              <h2 className="text-lg font-medium">Port d&apos;attache :</h2>
+              <p className="font-thin">
+                9 quai Paul Riquet, Port de Sète<br />
+                Sète, 34200, France
+>>>>>>> b2a1dfb3f351f9f0c25d6f5a30ae2f1308712f46
               </p>
             </div>
 
-            <div>
-              <h2 className="text-xl font-light mb-2">Email</h2>
-              <a 
-                href="mailto:contact@navire-arcadia.com"
-                className="text-gray-600 hover:text-gray-900 transition-colors duration-300"
-              >
-                contact@navire-arcadia.com
-              </a>
+            <div className="space-y-2">
+              <h2 className="text-lg font-medium">Email :</h2>
+              <p className="font-thin">
+                Contact@navire-arcadia.com
+              </p>
             </div>
 
-            <div className="pt-4">
-              <p className="italic">Visite sur rendez-vous</p>
-              <p className="italic">Dossier sur demande</p>
+            <div className="space-y-1 font-thin">
+              <p>Visites sur rendez-vous</p>
+              <p>Dossiers sur demande</p>
             </div>
           </div>
         </div>
