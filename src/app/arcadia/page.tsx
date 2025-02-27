@@ -1,4 +1,7 @@
 import type { Metadata } from 'next'
+import Navigation from '@/components/Navigation'
+import Image from 'next/image'
+import { mainsonNeueExtended } from '../fonts'
 
 export const metadata: Metadata = {
   title: 'L\'Arcadia | Voilier de luxe en Méditerranée',
@@ -16,34 +19,122 @@ export const metadata: Metadata = {
 export default function Arcadia() {
   return (
     <main className="min-h-screen bg-white">
+      <Navigation />
       
-      {/* Section En Construction */}
-      <section className="pt-32 pb-16">
-        <div className="max-w-4xl mx-auto px-4 text-center">
-          <h1 className="text-4xl font-bold mb-8 opacity-0 animate-[fadeInDown_1s_ease-out_forwards] font-minion-pro">
-            L&apos;Arcadia
-          </h1>
-          <div className="flex flex-col items-center justify-center space-y-6">
-            <svg 
-              className="w-24 h-24 text-gray-400 animate-[scaleIn_1s_ease-out_0.5s_forwards] opacity-0" 
-              fill="none" 
-              stroke="currentColor" 
-              viewBox="0 0 24 24"
-            >
-              <path 
-                strokeLinecap="round" 
-                strokeLinejoin="round" 
-                strokeWidth={1.5} 
-                d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z"
-              />
-            </svg>
-            <p className="text-gray-600 text-lg opacity-0 animate-[fadeInUp_1s_ease-out_1s_forwards]">
-              Cette page est en cours de construction.<br />
-              Nous préparons une expérience unique pour vous présenter notre magnifique voilier.
-            </p>
+      {/* Hero Image */}
+      <div className="max-w-[50rem] mx-auto px-4 pt-24">
+        <div className="relative aspect-[16/9] rounded-xl overflow-hidden">
+          <Image
+            src="/hero-boat.jpg"
+            alt="Voilier Arcadia"
+            fill
+            className="object-cover"
+            priority
+          />
+        </div>
+      </div>
+
+      {/* Titre */}
+      <div className="max-w-[95rem] mx-auto px-4 mt-8 text-center">
+        <h1 className="text-4xl font-minion-pro font-bold">L'ARCADIA</h1>
+      </div>
+
+      {/* Spécifications */}
+      <div className="max-w-[95rem] mx-auto px-4 mt-12">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-x-32">
+          {/* Colonne gauche */}
+          <div className="space-y-2">
+            <div className="flex justify-between items-baseline">
+              <span className="font-maison-neue">Année de construction</span>
+              <span className="font-maison-neue text-gray-600">1987</span>
+            </div>
+            <div className="flex justify-between items-baseline">
+              <span className="font-maison-neue">Rénovation</span>
+              <span className="font-maison-neue text-gray-600">complète en 2014 et 2022</span>
+            </div>
+            <div className="flex justify-between items-baseline">
+              <span className="font-maison-neue">Architecte</span>
+              <span className="font-maison-neue text-gray-600">Van de Stadt</span>
+            </div>
+            <div className="flex justify-between items-baseline">
+              <span className="font-maison-neue">Chantier naval</span>
+              <span className="font-maison-neue text-gray-600">Astilleros ALBA</span>
+            </div>
+            <div className="flex justify-between items-baseline">
+              <span className="font-maison-neue">Pavillon</span>
+              <span className="font-maison-neue text-gray-600">Français</span>
+            </div>
+            <div className="flex justify-between items-baseline">
+              <span className="font-maison-neue">Longueur</span>
+              <span className="font-maison-neue text-gray-600">21 m</span>
+            </div>
+            <div className="flex justify-between items-baseline">
+              <span className="font-maison-neue">Largeur</span>
+              <span className="font-maison-neue text-gray-600">4,70 m</span>
+            </div>
+            <div className="flex justify-between items-baseline">
+              <span className="font-maison-neue">Tirant d'eau</span>
+              <span className="font-maison-neue text-gray-600">2,20 m</span>
+            </div>
+          </div>
+
+          {/* Colonne droite */}
+          <div className="space-y-2 mt-8 md:mt-0">
+            <div className="flex justify-between items-baseline">
+              <span className="font-maison-neue">Matériau</span>
+              <span className="font-maison-neue text-gray-600">coque Bois</span>
+            </div>
+            <div className="flex justify-between items-baseline">
+              <span className="font-maison-neue">Capacité d'eau</span>
+              <span className="font-maison-neue text-gray-600">300 L</span>
+            </div>
+            <div className="flex justify-between items-baseline">
+              <span className="font-maison-neue">Capacité carburant</span>
+              <span className="font-maison-neue text-gray-600">Diesel</span>
+            </div>
+            <div className="flex justify-between items-baseline">
+              <span className="font-maison-neue">Moteur</span>
+              <span className="font-maison-neue text-gray-600">Yanmar-4LHA-(M)-DTP, 100 HP</span>
+            </div>
+            <div className="flex justify-between items-baseline">
+              <span className="font-maison-neue">Cabines</span>
+              <span className="font-maison-neue text-gray-600">4</span>
+            </div>
+            <div className="flex justify-between items-baseline">
+              <span className="font-maison-neue">Invités</span>
+              <span className="font-maison-neue text-gray-600">12</span>
+            </div>
+            <div className="flex justify-between items-baseline">
+              <span className="font-maison-neue">Couchages</span>
+              <span className="font-maison-neue text-gray-600">8</span>
+            </div>
+            <div className="flex justify-between items-baseline">
+              <span className="font-maison-neue">Salles de bain</span>
+              <span className="font-maison-neue text-gray-600">2</span>
+            </div>
           </div>
         </div>
-      </section>
+
+        {/* Images du bas */}
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mt-16 mb-16">
+          <div className="relative aspect-square rounded-lg overflow-hidden">
+            <Image
+              src="/ARCADIA/2.jpg"
+              alt="Détail du pont"
+              fill
+              className="object-cover"
+            />
+          </div>
+          <div className="relative aspect-square rounded-lg overflow-hidden">
+            <Image
+              src="/02.jpg"
+              alt="Détail des voiles"
+              fill
+              className="object-cover"
+            />
+          </div>
+        </div>
+      </div>
     </main>
   )
 } 
