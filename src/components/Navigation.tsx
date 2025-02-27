@@ -58,7 +58,7 @@ export default function Navigation() {
               className="relative text-gray-800 hover:text-gray-600 text-sm transition-colors duration-300 group"
             >
               Réservation
-              <span className={`absolute inset-x-0 -bottom-1 h-0.5 bg-gray-800 transition-transform duration-300 origin-left ${
+              <span className={`absolute inset-x-0 -bottom-1 h-[1px] bg-gray-800 transition-transform duration-300 origin-left ${
                 isActive('/reservation') ? 'scale-x-100' : 'scale-x-0 group-hover:scale-x-100 group-hover:bg-gray-200'
               }`} />
             </Link>
@@ -67,7 +67,7 @@ export default function Navigation() {
               className="relative text-gray-800 hover:text-gray-600 text-sm transition-colors duration-300 group"
             >
               L&apos;esprit
-              <span className={`absolute inset-x-0 -bottom-1 h-0.5 bg-gray-800 transition-transform duration-300 origin-left ${
+              <span className={`absolute inset-x-0 -bottom-1 h-[1px] bg-gray-800 transition-transform duration-300 origin-left ${
                 isActive('/esprit') ? 'scale-x-100' : 'scale-x-0 group-hover:scale-x-100 group-hover:bg-gray-200'
               }`} />
             </Link>
@@ -93,7 +93,7 @@ export default function Navigation() {
               className="relative text-gray-800 hover:text-gray-600 text-sm transition-colors duration-300 group"
             >
               L&apos;arcadia
-              <span className={`absolute inset-x-0 -bottom-1 h-0.5 bg-gray-800 transition-transform duration-300 origin-left ${
+              <span className={`absolute inset-x-0 -bottom-1 h-[1px] bg-gray-800 transition-transform duration-300 origin-left ${
                 isActive('/arcadia') ? 'scale-x-100' : 'scale-x-0 group-hover:scale-x-100 group-hover:bg-gray-200'
               }`} />
             </Link>
@@ -102,7 +102,7 @@ export default function Navigation() {
               className="relative text-gray-800 hover:text-gray-600 text-sm transition-colors duration-300 group"
             >
               Notre histoire
-              <span className={`absolute inset-x-0 -bottom-1 h-0.5 bg-gray-800 transition-transform duration-300 origin-left ${
+              <span className={`absolute inset-x-0 -bottom-1 h-[1px] bg-gray-800 transition-transform duration-300 origin-left ${
                 isActive('/histoire') ? 'scale-x-100' : 'scale-x-0 group-hover:scale-x-100 group-hover:bg-gray-200'
               }`} />
             </Link>
