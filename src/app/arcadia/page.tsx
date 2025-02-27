@@ -1,7 +1,6 @@
 import type { Metadata } from 'next'
 import Navigation from '@/components/Navigation'
 import Image from 'next/image'
-import { mainsonNeueExtended } from '../fonts'
 
 export const metadata: Metadata = {
   title: 'L\'Arcadia | Voilier de luxe en Méditerranée',
@@ -36,7 +35,7 @@ export default function Arcadia() {
 
       {/* Titre */}
       <div className="max-w-[95rem] mx-auto px-4 mt-8 text-center">
-        <h1 className="text-4xl font-minion-pro font-bold">L'ARCADIA</h1>
+        <h1 className="text-4xl font-minion-pro font-bold">L&apos;ARCADIA</h1>
       </div>
 
       {/* Spécifications */}
@@ -73,7 +72,7 @@ export default function Arcadia() {
               <span className="font-maison-neue text-gray-600">4,70 m</span>
             </div>
             <div className="flex justify-between items-baseline">
-              <span className="font-maison-neue">Tirant d'eau</span>
+              <span className="font-maison-neue">Tirant d&apos;eau</span>
               <span className="font-maison-neue text-gray-600">2,20 m</span>
             </div>
           </div>
@@ -85,7 +84,7 @@ export default function Arcadia() {
               <span className="font-maison-neue text-gray-600">coque Bois</span>
             </div>
             <div className="flex justify-between items-baseline">
-              <span className="font-maison-neue">Capacité d'eau</span>
+              <span className="font-maison-neue">Capacité d&apos;eau</span>
               <span className="font-maison-neue text-gray-600">300 L</span>
             </div>
             <div className="flex justify-between items-baseline">
