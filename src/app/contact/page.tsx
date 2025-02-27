@@ -19,13 +19,13 @@ export default function Contact() {
       
       <section className="pt-32 pb-16">
         <div className="max-w-2xl mx-auto px-4 text-center">
-          <h1 className="text-4xl font-bold mb-12 opacity-0 animate-[fadeInDown_1s_ease-out_forwards] font-minion-pro">
-            Contact
+          <h1 className="text-3xl font-bold mb-12 opacity-0 animate-[fadeInDown_1s_ease-out_forwards] font-minion-pro">
+            CONTACT
           </h1>
           
           <div className="space-y-8 text-gray-600 opacity-0 animate-[fadeInUp_1s_ease-out_0.5s_forwards]">
             <div>
-              <h2 className="text-xl font-light mb-2">Port d&apos;attache</h2>
+              <h2 className="text-xl font-extended-medium-bold mb-2">Port d&apos;attache</h2>
               <p className="leading-relaxed">
                 9 quai Paul Riquet<br />
                 Port de Sète<br />
