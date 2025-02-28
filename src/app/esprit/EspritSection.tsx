@@ -16,7 +16,7 @@ export default function EspritSection({
   const isInView = useInView(sectionRef, { once: true, margin: "-100px" })
 
   return (
-    <section id={section.id} className="py-12" ref={sectionRef}>
+    <section id={section.id} className="py-16" ref={sectionRef}>
       <div className="max-w-7xl mx-auto px-4 flex flex-col md:flex-row gap-8 md:gap-16 items-start">
         <motion.h2 
           className="text-2xl md:text-3xl font-light md:mb-6 md:w-1/3 font-minion-pro"
@@ -55,7 +55,7 @@ export default function EspritSection({
       </div>
       {!isLast && (
         <motion.div 
-          className="w-full h-[1px] bg-gray-200 mt-12"
+          className="w-full h-[1px] bg-gray-200 mt-16"
           initial={{ scaleX: 0 }}
           animate={isInView ? { scaleX: 1 } : { scaleX: 0 }}
           transition={{ duration: 0.8 }}

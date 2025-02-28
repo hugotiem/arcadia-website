@@ -94,7 +94,7 @@ export default function Histoire() {
             style={{ minHeight: '400px' }}
           >
             <Image
-              src="/HISTOIRE/1.jpg"
+              src="/HISTOIRE/1.JPG"
               alt="La Famille Blanchard Dignac"
               fill
               className="object-cover"
@@ -114,7 +114,7 @@ export default function Histoire() {
             style={{ minHeight: '400px' }}
           >
             <Image
-              src="/HISTOIRE/2.jpg"
+              src="/HISTOIRE/2.JPG"
               alt="Le Château de Lurs"
               fill
               className="object-cover"

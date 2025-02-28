@@ -34,7 +34,7 @@ export default function Reservation() {
           <div className="max-w-3xl mx-auto px-4 text-center">
             <div className="animate-[fadeInDown_1s_ease-out_forwards] opacity-0">
               <svg 
-                className="w-16 h-16 mx-auto text-green-500 mb-6" 
+                className="w-16 h-16 mx-auto text-green-500 mb-8" 
                 fill="none" 
                 stroke="currentColor" 
                 viewBox="0 0 24 24"
@@ -46,7 +46,7 @@ export default function Reservation() {
                   d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" 
                 />
               </svg>
-              <h2 className="text-3xl font-light mb-6">Merci !</h2>
+              <h2 className="text-3xl font-light mb-8">Merci !</h2>
               <p className="text-gray-600 font-light">
                 Votre demande a bien été prise en compte pour un voyage à bord le{' '}
                 <span className="font-medium">{formatDate(formData.date)}</span>
@@ -63,10 +63,10 @@ export default function Reservation() {
       {/* Introduction Section */}
       <section className="pt-32 pb-16">
         <div className="max-w-4xl mx-auto px-4 text-center">
-          <h1 className="text-4xl font-light mb-8 font-minion-pro">
+          <h1 className="text-4xl font-light mb-8 font-minion-pro opacity-0 animate-[fadeInDown_1s_ease-out_forwards]">
             Une Expérience Maritime d&apos;Exception
           </h1>
-          <p className="text-gray-600 leading-relaxed font-light text-lg max-w-3xl mx-auto">
+          <p className="text-gray-600 leading-relaxed font-light text-lg max-w-3xl mx-auto opacity-0 animate-[fadeInUp_1s_ease-out_0.5s_forwards]">
             Dans la noble tradition des grands navigateurs, notre ketch sillonne avec grâce
             les eaux méditerranéennes. Façonné dans les essences les plus précieuses, il perpétue
             l&apos;excellence maritime française. De la Riviera aux rivages d&apos;Orient, notre équipage cultive
@@ -119,27 +119,6 @@ export default function Reservation() {
           </div>
         </div>
       </section>
-
-      {/* add a divider */}
-      {/* <div className="h-[1px] bg-gray-500 mt-20" /> */}
-      {/* Reservation Form */}
-      {/* <section className="py-12 md:py-20">
-        <div className="max-w-3xl mx-auto px-4">
-          <div className="text-center mb-12">
-            <h2 className="text-4xl font-light mb-6">Réservation</h2>
-            <p className="text-gray-600">
-              Vous souhaitez rejoindre l&apos;Arcadia ? Écrivez nous et planifions ensemble votre navigation.
-            </p>
-          </div>
-
-          <ReservationForm 
-            onSubmit={(formData) => {
-              setFormData(formData)
-              setIsSubmitted(true)
-            }} 
-          />
-        </div>
-      </section> */}
     </main>
   )
 } 
