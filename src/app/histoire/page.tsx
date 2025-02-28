@@ -89,7 +89,7 @@ export default function Histoire() {
           </div>
           <div 
             ref={setRef(3)}
-            className="relative h-full animate-on-scroll grayscale hover:grayscale-0 transition-all duration-500"
+            className="relative h-full animate-on-scroll transition-all duration-500"
             data-animation="animate-slide-left"
             style={{ minHeight: '400px' }}
           >
@@ -97,7 +97,7 @@ export default function Histoire() {
               src="/HISTOIRE/1.JPG"
               alt="La Famille Blanchard Dignac"
               fill
-              className="object-cover"
+              className="object-cover rounded-lg"
             />
           </div>
         </section>
@@ -109,7 +109,7 @@ export default function Histoire() {
         <section className="grid grid-cols-1 md:grid-cols-2 gap-16 items-start">
           <div 
             ref={setRef(4)}
-            className="relative h-full animate-on-scroll grayscale hover:grayscale-0 transition-all duration-500"
+            className="relative h-full animate-on-scroll transition-all duration-500"
             data-animation="animate-slide-right"
             style={{ minHeight: '400px' }}
           >
@@ -117,7 +117,7 @@ export default function Histoire() {
               src="/HISTOIRE/2.JPG"
               alt="Le Château de Lurs"
               fill
-              className="object-cover"
+              className="object-cover rounded-lg"
             />
           </div>
           <div 
@@ -173,7 +173,7 @@ export default function Histoire() {
           </div>
           <div 
             ref={setRef(7)}
-            className="relative h-full animate-on-scroll grayscale hover:grayscale-0 transition-all duration-500"
+            className="relative h-full animate-on-scroll transition-all duration-500"
             data-animation="animate-slide-left"
             style={{ minHeight: '400px' }}
           >
@@ -181,7 +181,7 @@ export default function Histoire() {
               src="/HISTOIRE/3.JPG"
               alt="L&apos;École d&apos;Art"
               fill
-              className="object-cover"
+              className="object-cover rounded-lg"
               priority
             />
           </div>
