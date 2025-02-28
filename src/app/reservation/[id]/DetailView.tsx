@@ -61,10 +61,12 @@ export default function DetailView({ itemId }: { itemId: string }) {
                   layoutId={`card-image-${item.id}`}
                   className="relative h-full"
                 >
-                  <img
+                  <Image
                     src={item.image}
                     alt={item.title}
-                    className="object-cover h-full w-full"
+                    fill
+                    className="object-cover"
+                    priority
                   />
                 </motion.div>
                 <div className="absolute inset-0 bg-black/30 sm:bg-transparent"></div>

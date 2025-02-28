@@ -19,12 +19,11 @@ export const metadata: Metadata = {
 export default function Esprit() {
   return (
     <main className="flex-1 bg-white max-w-[90rem] mx-auto px-8">
-      
       {/* Header Section */}
-      <section className="pt-20 pb-10">
+      <section className="pt-32 pb-16">
         <div className="max-w-4xl mx-auto px-4 text-center">
-          <h1 className="text-4xl font-bold mb-4 font-minion-pro">L&apos;Esprit</h1>
-          <p className="text-gray-600 leading-[1.2em]">
+          <h1 className="text-4xl font-light mb-8 font-minion-pro">L&apos;Esprit</h1>
+          <p className="text-gray-600 leading-relaxed font-light text-lg">
             Dans cet écrin flottant, chaque détail a été pensé pour votre bien-être. De la 
             vaisselle raffinée aux draps les plus fins, en passant par une cave à vins 
             soigneusement sélectionnée, nous avons créé un univers où l&apos;excellence française 
@@ -34,7 +33,7 @@ export default function Esprit() {
       </section>
 
       {/* Navigation Pills */}
-      <div className="flex flex-wrap justify-center gap-4 mb-12 px-4">
+      <div className="flex flex-wrap justify-center gap-4 mb-16 px-4">
         {espritSections.map((section) => (
           <Link 
             key={section.id}
@@ -47,13 +46,15 @@ export default function Esprit() {
       </div>
 
       {/* Content Sections */}
-      {espritSections.map((section, index) => (
-        <EspritSection 
-          key={section.id} 
-          section={section} 
-          isLast={index === espritSections.length - 1}
-        />
-      ))}
+      <div className="space-y-16">
+        {espritSections.map((section, index) => (
+          <EspritSection 
+            key={section.id} 
+            section={section} 
+            isLast={index === espritSections.length - 1}
+          />
+        ))}
+      </div>
     </main>
   )
 } 
