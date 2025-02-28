@@ -116,17 +116,18 @@ export default function DetailView({ itemId }: { itemId: string }) {
             transition={{ duration: 0.6 }}
           >
             <div className="lg:w-2/3">
-              <h2 className="text-2xl font-bold mb-4 lg:w-2/3 font-minion-pro">LIBERTÉ ET FLEXIBILITÉ TOTALE</h2>
+              <h2 className="text-3xl font-bold mb-4 lg:w-2/3 font-minion-pro">Liberté et Flexibilité totale</h2>
               <p className="text-gray-600 text-lg leading-relaxed lg:w-2/3">
                 Le voyage s&apos;en remet à vous et votre voilier vous transporte où que vous mène dans le temps et l&apos;espace selon vos aspirations. Liberté absolue pour naviguer à votre rythme, vous arrêter où bon vous semble. Élégante et sans contrainte, ainsi se déroule une excursion authentique avec le capitaine. Pensez, décidez, nous exécutons. Le programme est le vôtre, la destination est votre choix.
               </p>
             </div>
-            <div className="relative aspect-square w-full md:w-1/2 lg:w-1/3">
+            <div className="relative aspect-square w-full md:w-1/2 lg:w-1/3 max-h-[300px] flex flex-col items-end">
               <Image 
                 src="/liberty.jpg" 
                 alt="Liberté en mer" 
-                fill
-                className="rounded-lg shadow-xl object-cover" 
+                height={300}
+                width={300}
+                className="rounded-lg shadow-xl object-cover h-full aspect-square" 
               />
             </div>
           </motion.section>
@@ -139,16 +140,17 @@ export default function DetailView({ itemId }: { itemId: string }) {
             animate={isSection2InView ? { opacity: 1, y: 0 } : { opacity: 0, y: 50 }}
             transition={{ duration: 0.6 }}
           >
-            <div className="relative aspect-square w-full md:w-1/2 lg:w-1/3">
+            <div className="relative aspect-square w-full md:w-1/2 lg:w-1/3 max-h-[300px] flex flex-col items-start">
               <Image 
                 src="/cuisine.jpg" 
                 alt="Cuisine d'exception" 
-                fill
-                className="rounded-lg shadow-xl object-cover" 
+                height={300}
+                width={300}
+                className="rounded-lg shadow-xl object-cover h-full aspect-square" 
               />
             </div>
             <div className="lg:w-2/3 flex flex-col lg:items-end">
-              <h2 className="text-2xl font-bold mb-4 lg:text-right lg:w-2/3 font-minion-pro">UNE CUISINE D&apos;EXCEPTION</h2>
+              <h2 className="text-3xl font-bold mb-4 lg:text-right lg:w-2/3 font-minion-pro">Une cuisine d&apos;exception</h2>
               <p className="text-gray-600 text-lg leading-relaxed lg:w-2/3 lg:text-right ">
                 Une cuisine raffinée, préparée à bord par notre chef. Il sublime les produits frais de la mer et du terroir. À la fois délicate et authentique, la gastronomie à bord est un art qui se décline à chaque repas. Nous accordons une attention particulière à vos préférences pour créer des menus sur mesure. Notre chef s&apos;adapte à vos goûts et restrictions alimentaires pour que chaque repas soit un moment de plaisir absolu.
               </p>
@@ -164,17 +166,18 @@ export default function DetailView({ itemId }: { itemId: string }) {
             transition={{ duration: 0.6 }}
           >
             <div className="lg:w-2/3">
-              <h2 className="text-2xl font-bold mb-4 lg:w-2/3 font-minion-pro">ACTIVITÉS ET DÉCOUVERTE</h2>
+              <h2 className="text-3xl font-bold mb-4 lg:w-2/3 font-minion-pro">Activités et Découverte</h2>
               <p className="text-gray-600 text-lg leading-relaxed lg:w-2/3">
                 Chaque escale est une invitation à de nouvelles découvertes. Profitez des plus belles plages de la Méditerranée, explorez des criques secrètes accessibles uniquement par la mer. Le capitaine et l&apos;équipage vous accompagnent dans vos activités nautiques : paddle, snorkeling, pêche... Découvrez les trésors cachés du littoral et profitez de moments privilégiés en toute intimité.
               </p>
             </div>
-            <div className="relative aspect-square w-full md:w-1/2 lg:w-1/3">
+            <div className="relative aspect-square w-full md:w-1/2 max-h-[300px] flex flex-col items-end lg:w-1/3">
               <Image 
                 src="/activities.jpg" 
                 alt="Activités en mer" 
-                fill
-                className="rounded-lg shadow-xl object-cover" 
+                height={300}
+                width={300}  
+                className="rounded-lg shadow-xl object-cover h-full aspect-square" 
               />
             </div>
           </motion.section>

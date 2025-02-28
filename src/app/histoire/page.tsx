@@ -49,7 +49,7 @@ export default function Histoire() {
           </h1>
           <p 
             ref={setRef(1)}
-            className="text-gray-600 leading-relaxed animate-on-scroll"
+            className="text-gray-600 leading-relaxed font-light animate-on-scroll"
             data-animation="animate-fade-up"
           >
             Dans la noble tradition des grands navigateurs, notre ketch sillonne avec grâce

@@ -30,7 +30,7 @@ export default function Reservation() {
   if (isSubmitted) {
     return (
       <main className="min-h-screen bg-white">
-        <div className="pt-32 pb-16">
+        <div className="pt-20 pb-16">
           <div className="max-w-3xl mx-auto px-4 text-center">
             <div className="animate-[fadeInDown_1s_ease-out_forwards] opacity-0">
               <svg 
@@ -61,12 +61,12 @@ export default function Reservation() {
   return (
     <main className="min-h-screen bg-white">
       {/* Introduction Section */}
-      <section className="pt-32 pb-16">
+      <section className="pt-20 pb-4">
         <div className="max-w-4xl mx-auto px-4 text-center">
-          <h1 className="text-4xl font-light mb-8 font-minion-pro opacity-0 animate-[fadeInDown_1s_ease-out_forwards]">
+          <h1 className="text-4xl font-light mb-4 font-minion-pro opacity-0 animate-[fadeInDown_1s_ease-out_forwards]">
             Une Expérience Maritime d&apos;Exception
           </h1>
-          <p className="text-gray-600 leading-relaxed font-light text-lg max-w-3xl mx-auto opacity-0 animate-[fadeInUp_1s_ease-out_0.5s_forwards]">
+          <p className="text-gray-600 leading-relaxed font-light max-w-3xl mx-auto opacity-0 animate-[fadeInUp_1s_ease-out_0.5s_forwards]" style={{lineHeight: '1.2em'}}>
             Dans la noble tradition des grands navigateurs, notre ketch sillonne avec grâce
             les eaux méditerranéennes. Façonné dans les essences les plus précieuses, il perpétue
             l&apos;excellence maritime française. De la Riviera aux rivages d&apos;Orient, notre équipage cultive
@@ -77,7 +77,7 @@ export default function Reservation() {
       </section>
 
       {/* Experiences Grid */}
-      <section className="py-16">
+      <section className="py-10">
         <div className="max-w-7xl mx-auto px-4">
           <Gallery />
 
