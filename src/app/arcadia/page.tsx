@@ -2,7 +2,7 @@ import type { Metadata } from 'next'
 import Navigation from '@/components/Navigation'
 import Image from 'next/image'
 import { mainsonNeueExtended } from '../fonts'
-
+import StatsSection from '@/components/StatsSection'
 export const metadata: Metadata = {
   title: 'L\'Arcadia | Voilier de luxe en Méditerranée',
   description: 'Découvrez l\'Arcadia, un ketch d\'exception. Luxe, confort et élégance pour une expérience maritime unique en Méditerranée.',
@@ -32,6 +32,11 @@ export default function Arcadia() {
             priority
           />
         </div>
+      </div>
+
+      {/* Stats Section with Animation */}
+      <div className="max-w-[95rem] mx-auto px-4 mt-12">
+        <StatsSection />
       </div>
 
       {/* Titre et Divider */}
