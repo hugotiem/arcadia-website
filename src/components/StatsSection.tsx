@@ -56,7 +56,7 @@ const AnimatedCounter = ({ end, label }: { end: number; label: string }) => {
 const StatsSection = () => {
   return (
     <div className="w-full max-w-6xl mx-auto">
-      <div className="grid grid-cols-2 md:grid-cols-4 gap-8 md:gap-12 py-12">
+      <div className="grid grid-cols-2 md:grid-cols-4 gap-8 md:gap-12">
         <AnimatedCounter end={8} label="COUCHAGES" />
         <AnimatedCounter end={21} label="LONGUEUR" />
         <AnimatedCounter end={12} label="INVITÉS" />
