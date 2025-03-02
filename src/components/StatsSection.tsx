@@ -47,7 +47,7 @@ const AnimatedCounter = ({ end, label }: { end: number; label: string }) => {
   return (
     <div ref={ref} className="flex flex-col items-center">
       <span className="text-6xl md:text-7xl lg:text-8xl font-bold font-minion-pro">{count}</span>
-      <span className={`${mainsonNeueExtended.className} text-xs md:text-sm uppercase tracking-wider mt-2 text-center`}>{label}</span>
+      <span className={`${mainsonNeueExtended.className} text-sm md:text-base uppercase tracking-wider text-center`}>{label}</span>
     </div>
   );
 };

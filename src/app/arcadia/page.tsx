@@ -3,6 +3,8 @@ import Navigation from '@/components/Navigation'
 import Image from 'next/image'
 import { mainsonNeueExtended } from '../fonts'
 import StatsSection from '@/components/StatsSection'
+import ImageCarousel from '@/components/ImageCarousel'
+
 export const metadata: Metadata = {
   title: 'L\'Arcadia | Voilier de luxe en Méditerranée',
   description: 'Découvrez l\'Arcadia, un ketch d\'exception. Luxe, confort et élégance pour une expérience maritime unique en Méditerranée.',
@@ -45,26 +47,9 @@ export default function Arcadia() {
         <div className="w-full h-[1px] bg-black/20 mt-5"></div>
       </div>
 
-      {/* Images du bas */}
+      {/* Image Carousel */}
       <div className="max-w-[68rem] mx-auto px-4 mt-8">
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 justify-items-center">
-          <div className="relative w-[500px] h-[600px] rounded-lg overflow-hidden">
-            <Image
-              src="/ARCADIA/2.jpg"
-              alt="Détail du pont"
-              fill
-              className="object-cover"
-            />
-          </div>
-          <div className="relative w-[500px] h-[600px] rounded-lg overflow-hidden">
-            <Image
-              src="/02.jpg"
-              alt="Détail des voiles"
-              fill
-              className="object-cover"
-            />
-          </div>
-        </div>
+        <ImageCarousel />
       </div>
 
       {/* Spécifications */}
@@ -145,4 +130,4 @@ export default function Arcadia() {
       </div>
     </main>
   )
-} 
+}
