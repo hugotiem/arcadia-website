@@ -1,31 +1,31 @@
-import type { Metadata } from 'next'
+'use client'
+
+import { motion, useInView } from 'framer-motion'
+import { useRef } from 'react'
 import Navigation from '@/components/Navigation'
 import Image from 'next/image'
 import { mainsonNeueExtended } from '../fonts'
 import StatsSection from '@/components/StatsSection'
 import ImageCarousel from '@/components/ImageCarousel'
 
-export const metadata: Metadata = {
-  title: 'L\'Arcadia | Voilier de luxe en Méditerranée',
-  description: 'Découvrez l\'Arcadia, un ketch d\'exception. Luxe, confort et élégance pour une expérience maritime unique en Méditerranée.',
-  openGraph: {
-    title: 'L\'Arcadia | Voilier de luxe en Méditerranée',
-    description: 'Découvrez l\'Arcadia, un ketch d\'exception. Luxe, confort et élégance pour une expérience maritime unique en Méditerranée.',
-    url: 'https://navire-arcadia.com/arcadia',
-    siteName: 'Arcadia - Voilier de luxe',
-    locale: 'fr_FR',
-    type: 'article',
-  },
-}
-
 export default function Arcadia() {
+  const heroRef = useRef(null)
+  const dividerRef = useRef(null)
+  const isHeroInView = useInView(heroRef, { once: true, margin: "-100px" })
+  const isDividerInView = useInView(dividerRef, { once: true, margin: "-100px" })
+
   return (
     <main className="min-h-screen bg-white">
       <Navigation />
       
-      {/* Hero Image */}
-      <div className="w-[90vw] sm:w-[80vw] md:w-[70vw] lg:w-[60vw] xl:w-[50vw] mx-auto px-4 pt-24">
-        <div className="relative aspect-[16/9] rounded-xl overflow-hidden">
+      {/* Hero Image avec animation */}
+      <div className="w-[90vw] sm:w-[80vw] md:w-[70vw] lg:w-[60vw] xl:w-[50vw] mx-auto px-4 pt-24" ref={heroRef}>
+        <motion.div 
+          className="relative aspect-[16/9] rounded-xl overflow-hidden"
+          initial={{ opacity: 0, y: 100 }}
+          animate={isHeroInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 100 }}
+          transition={{ duration: 0.8, ease: "easeOut" }}
+        >
           <Image
             src="/hero-boat.jpg"
             alt="Voilier Arcadia"
@@ -33,7 +33,17 @@ export default function Arcadia() {
             className="object-cover"
             priority
           />
-        </div>
+        </motion.div>
+      </div>
+
+      {/* Premier diviseur animé */}
+      <div className="max-w-[95rem] mx-auto px-4 mt-12">
+        <motion.div 
+          className="w-full h-[1px] bg-gray-500"
+          initial={{ scaleX: 0 }}
+          animate={isHeroInView ? { scaleX: 1 } : { scaleX: 0 }}
+          transition={{ duration: 0.8 }}
+        />
       </div>
 
       {/* Stats Section with Animation */}
@@ -41,16 +51,24 @@ export default function Arcadia() {
         <StatsSection />
       </div>
 
-
       {/* Image Carousel */}
       <div className="max-w-[68rem] mx-auto px-4 mt-8">
         <ImageCarousel />
       </div>
 
-      {/* Titre et Divider */}
+      {/* Titre */}
       <div className="max-w-[95rem] mx-auto px-4 mt-8 text-center">
         <h1 className="text-4xl font-minion-pro font-bold">L&apos;ARCADIA</h1>
-        <div className="w-full h-[1px] bg-black/20 mt-5"></div>
+      </div>
+
+      {/* Deuxième diviseur animé */}
+      <div className="max-w-[95rem] mx-auto px-4 mt-5" ref={dividerRef}>
+        <motion.div 
+          className="w-full h-[1px] bg-gray-500"
+          initial={{ scaleX: 0 }}
+          animate={isDividerInView ? { scaleX: 1 } : { scaleX: 0 }}
+          transition={{ duration: 0.8 }}
+        />
       </div>
 
       {/* Spécifications */}

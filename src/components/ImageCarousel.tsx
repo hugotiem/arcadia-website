@@ -104,6 +104,19 @@ export default function ImageCarousel() {
   
   return (
     <div className="relative w-full py-8">
+      {/* Navigation buttons */}
+      <motion.button 
+        onClick={goToPrevious}
+        className="absolute left-[-3rem] top-1/2 -translate-y-1/2 bg-white/80 hover:bg-white text-black p-3 rounded-full shadow-md z-10"
+        aria-label="Previous images"
+        whileHover={{ scale: 1.1 }}
+        whileTap={{ scale: 0.9 }}
+      >
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+          <path d="M15 18l-6-6 6-6" />
+        </svg>
+      </motion.button>
+      
       {/* Carousel container */}
       <div className="overflow-hidden">
         <AnimatePresence initial={false} mode="wait" custom={direction}>
@@ -140,22 +153,9 @@ export default function ImageCarousel() {
         </AnimatePresence>
       </div>
       
-      {/* Navigation buttons */}
-      <motion.button 
-        onClick={goToPrevious}
-        className="absolute left-4 top-1/2 -translate-y-1/2 bg-white/80 hover:bg-white text-black p-3 rounded-full shadow-md z-10"
-        aria-label="Previous images"
-        whileHover={{ scale: 1.1 }}
-        whileTap={{ scale: 0.9 }}
-      >
-        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-          <path d="M15 18l-6-6 6-6" />
-        </svg>
-      </motion.button>
-      
       <motion.button 
         onClick={goToNext}
-        className="absolute right-4 top-1/2 -translate-y-1/2 bg-white/80 hover:bg-white text-black p-3 rounded-full shadow-md z-10"
+        className="absolute right-[-3rem] top-1/2 -translate-y-1/2 bg-white/80 hover:bg-white text-black p-3 rounded-full shadow-md z-10"
         aria-label="Next images"
         whileHover={{ scale: 1.1 }}
         whileTap={{ scale: 0.9 }}

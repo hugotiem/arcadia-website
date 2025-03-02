@@ -1,6 +1,6 @@
 import type { Metadata } from 'next'
 import Navigation from '@/components/Navigation'
-import { mainsonNeueExtended } from '../fonts'
+import { mainsonNeueExtended, minionPro } from '../fonts'
 
 export const metadata: Metadata = {
   title: 'Contact | Arcadia - Voilier de luxe',
@@ -22,29 +22,29 @@ export default function Contact() {
       
       <section className="pt-32 pb-16">
         <div className="max-w-xl mx-auto px-4 text-center">
-          <h1 className={`text-2xl mb-16 ${mainsonNeueExtended.className} font-medium`}>
-            CONTACT
+          <h1 className={`text-4xl mb-16 ${minionPro.className} font-bold`}>
+            Contact
           </h1>
           
-          <div className={`space-y-8 ${mainsonNeueExtended.className}`}>
+          <div className="space-y-12">
             <div className="space-y-2">
-              <h2 className="text-lg font-medium">Port d&apos;attache :</h2>
-              <p className="font-thin">
+              <h2 className={`text-2xl ${minionPro.className} font-light`}>Port d&apos;attache</h2>
+              <p className={`${mainsonNeueExtended.className} text-sm text-gray-600`}>
                 9 quai Paul Riquet, Port de Sète<br />
                 Sète, 34200, France
               </p>
             </div>
 
             <div className="space-y-2">
-              <h2 className="text-lg font-medium">Email :</h2>
-              <p className="font-thin">
+              <h2 className={`text-2xl ${minionPro.className} font-light`}>Email</h2>
+              <p className={`${mainsonNeueExtended.className} text-sm text-gray-600`}>
                 Contact@navire-arcadia.com
               </p>
             </div>
 
-            <div className="space-y-1 font-thin">
-              <p>Visites sur rendez-vous</p>
-              <p>Dossiers sur demande</p>
+            <div className="space-y-2">
+              <p className={`${mainsonNeueExtended.className} text-sm text-gray-600`}>Visites sur rendez-vous</p>
+              <p className={`${mainsonNeueExtended.className} text-sm text-gray-600`}>Dossiers sur demande</p>
             </div>
           </div>
         </div>

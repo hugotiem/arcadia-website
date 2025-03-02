@@ -12,10 +12,14 @@ export default function DetailView({ itemId }: { itemId: string }) {
   const section1Ref = useRef(null);
   const section2Ref = useRef(null);
   const section3Ref = useRef(null);
+  const divider1Ref = useRef(null);
+  const divider2Ref = useRef(null);
   
   const isSection1InView = useInView(section1Ref, { once: true, margin: "-100px" });
   const isSection2InView = useInView(section2Ref, { once: true, margin: "-100px" });
   const isSection3InView = useInView(section3Ref, { once: true, margin: "-100px" });
+  const isDivider1InView = useInView(divider1Ref, { once: true, margin: "-100px" });
+  const isDivider2InView = useInView(divider2Ref, { once: true, margin: "-100px" });
 
   if (!item) {
     return (
@@ -132,6 +136,16 @@ export default function DetailView({ itemId }: { itemId: string }) {
             </div>
           </motion.section>
 
+          {/* Premier diviseur animé */}
+          <div ref={divider1Ref} className="my-20">
+            <motion.div 
+              className="w-full h-[1px] bg-gray-500"
+              initial={{ scaleX: 0 }}
+              animate={isDivider1InView ? { scaleX: 1 } : { scaleX: 0 }}
+              transition={{ duration: 0.8 }}
+            />
+          </div>
+
           {/* Une Cuisine d'Exception */}
           <motion.section
             ref={section2Ref}
@@ -156,6 +170,16 @@ export default function DetailView({ itemId }: { itemId: string }) {
               </p>
             </div>
           </motion.section>
+
+          {/* Deuxième diviseur animé */}
+          <div ref={divider2Ref} className="my-20">
+            <motion.div 
+              className="w-full h-[1px] bg-gray-500"
+              initial={{ scaleX: 0 }}
+              animate={isDivider2InView ? { scaleX: 1 } : { scaleX: 0 }}
+              transition={{ duration: 0.8 }}
+            />
+          </div>
 
           {/* Activités et Découverte */}
           <motion.section
