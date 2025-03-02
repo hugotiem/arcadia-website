@@ -41,15 +41,16 @@ export default function Arcadia() {
         <StatsSection />
       </div>
 
-      {/* Titre et Divider */}
-      <div className="max-w-[95rem] mx-auto px-4 mt-8 text-center">
-        <h1 className="text-4xl font-minion-pro font-bold">ARCADIA</h1>
-        <div className="w-full h-[1px] bg-black/20 mt-5"></div>
-      </div>
 
       {/* Image Carousel */}
       <div className="max-w-[68rem] mx-auto px-4 mt-8">
         <ImageCarousel />
+      </div>
+
+      {/* Titre et Divider */}
+      <div className="max-w-[95rem] mx-auto px-4 mt-8 text-center">
+        <h1 className="text-4xl font-minion-pro font-bold">L'ARCADIA</h1>
+        <div className="w-full h-[1px] bg-black/20 mt-5"></div>
       </div>
 
       {/* Spécifications */}
