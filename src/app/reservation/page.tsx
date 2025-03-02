@@ -63,7 +63,7 @@ export default function Reservation() {
       {/* Introduction Section */}
       <section className="pt-20 pb-4">
         <div className="max-w-4xl mx-auto px-4 text-center">
-          <h1 className="text-4xl font-light mb-4 font-minion-pro opacity-0 animate-[fadeInDown_1s_ease-out_forwards]">
+          <h1 className="text-4xl font-bold mb-4 font-minion-pro opacity-0 animate-[fadeInDown_1s_ease-out_forwards]">
             Une Expérience Maritime d&apos;Exception
           </h1>
           <p className="text-gray-600 leading-relaxed font-light max-w-3xl mx-auto opacity-0 animate-[fadeInUp_1s_ease-out_0.5s_forwards]" style={{lineHeight: '1.2em'}}>
