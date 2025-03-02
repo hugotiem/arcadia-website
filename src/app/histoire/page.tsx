@@ -38,11 +38,11 @@ export default function Histoire() {
   return (
     <main className="min-h-screen bg-white">
       {/* Header Section */}
-      <section className="pt-32 pb-16">
+      <section className="pt-20 pb-16">
         <div className="max-w-4xl mx-auto px-4 text-center">
           <h1 
             ref={setRef(0)}
-            className="text-4xl font-bold mb-8 font-minion-pro animate-on-scroll"
+            className="text-4xl font-bold mb-4 font-minion-pro animate-on-scroll"
             data-animation="animate-fade-up"
           >
             Une Expérience Maritime d&apos;Exception
@@ -51,6 +51,7 @@ export default function Histoire() {
             ref={setRef(1)}
             className="text-gray-600 leading-relaxed font-light animate-on-scroll"
             data-animation="animate-fade-up"
+            style={{lineHeight: '1.2em'}}
           >
             Dans la noble tradition des grands navigateurs, notre ketch sillonne avec grâce
             les eaux méditerranéennes. Façonné dans les essences les plus précieuses, il perpétue
