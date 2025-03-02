@@ -44,7 +44,6 @@ function ExperienceCard({ experience }: { experience: Experience }) {
               alt={experience.title}
               className="object-cover h-full w-full"
             />
-            <div className="absolute inset-0 bg-black/30 sm:bg-transparent"></div>
           </div>
 
           <div className="relative z-10 h-full flex flex-col justify-end p-2">
