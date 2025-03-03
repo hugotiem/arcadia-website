@@ -42,14 +42,21 @@ export default function Histoire() {
         <div className="max-w-4xl mx-auto px-4 text-center">
           <h1 
             ref={setRef(0)}
-            className="text-4xl font-bold mb-8 font-minion-pro animate-on-scroll"
+            className="text-4xl font-bold mb-4 font-minion-pro animate-on-scroll"
             data-animation="animate-fade-up"
           >
-            LE NAVIRE-ARCADIA – UN STUDIO NOMADE AU RYTHME DES VAGUES
+            LE NAVIRE-ARCADIA
           </h1>
-          <p 
+          <h2
             ref={setRef(1)}
-            className="text-gray-600 leading-relaxed font-light animate-on-scroll max-w-3xl mx-auto"
+            className="text-2xl font-light mb-8 animate-on-scroll"
+            data-animation="animate-fade-up"
+          >
+            UN STUDIO NOMADE AU RYTHME DES VAGUES
+          </h2>
+          <p 
+            ref={setRef(2)}
+            className="text-gray-600 leading-relaxed font-light animate-on-scroll"
             data-animation="animate-fade-up"
             style={{lineHeight: '1.2em'}}
           >
@@ -68,7 +75,7 @@ export default function Histoire() {
         {/* Le Navire-Arcadia */}
         <section className="grid grid-cols-1 md:grid-cols-2 gap-16 items-start">
           <div 
-            ref={setRef(2)}
+            ref={setRef(3)}
             className="animate-on-scroll h-fit"
             data-animation="animate-slide-right"
           >
@@ -80,20 +87,15 @@ export default function Histoire() {
               escales en Méditerranée. Ce studio flottant accueille artistes, écrivains, cinéastes, penseurs,
               mais aussi figures politiques et acteurs de la société, créant ainsi un lieu unique d&apos;échange
               et de dialogue.
-              <br /><br />
               En participant aux grands événements culturels méditerranéens – du Festival de Cannes à
               Jazz à Juan, en passant par des rencontres littéraires et gastronomiques – le Navire-Arcadia
               devient une scène nomade où se tissent des liens entre disciplines et sensibilités. Chaque
               escale est l&apos;occasion de produire des contenus immersifs : interviews, débats,
-              documentaires ou podcasts, mettant en lumière les grands enjeux culturels et sociétaux.
-              <br /><br />
-              À travers ces traversées et ces rencontres, le Navire-Arcadia incarne une nouvelle manière
-              d&apos;explorer et de partager la culture, en lien direct avec les éléments et les territoires qu&apos;il
-              traverse.
+              documentaires ou créations artistiques.
             </p>
           </div>
           <div 
-            ref={setRef(3)}
+            ref={setRef(4)}
             className="relative h-full animate-on-scroll transition-all duration-500"
             data-animation="animate-slide-left"
             style={{ minHeight: '400px' }}
@@ -113,7 +115,7 @@ export default function Histoire() {
         {/* Le Château de Lurs */}
         <section className="grid grid-cols-1 md:grid-cols-2 gap-16 items-start">
           <div 
-            ref={setRef(4)}
+            ref={setRef(5)}
             className="relative h-full animate-on-scroll transition-all duration-500"
             data-animation="animate-slide-right"
             style={{ minHeight: '400px' }}
@@ -126,7 +128,7 @@ export default function Histoire() {
             />
           </div>
           <div 
-            ref={setRef(5)}
+            ref={setRef(6)}
             className="animate-on-scroll h-fit"
             data-animation="animate-slide-left"
           >
@@ -158,7 +160,7 @@ export default function Histoire() {
         {/* L'École d'Art */}
         <section className="grid grid-cols-1 md:grid-cols-2 gap-16 items-start" id="ecole">
           <div 
-            ref={setRef(6)}
+            ref={setRef(7)}
             className="animate-on-scroll h-fit"
             data-animation="animate-slide-right"
           >
@@ -189,7 +191,7 @@ export default function Histoire() {
             </p>
           </div>
           <div 
-            ref={setRef(7)}
+            ref={setRef(8)}
             className="relative h-full animate-on-scroll transition-all duration-500"
             data-animation="animate-slide-left"
             style={{ minHeight: '400px' }}
