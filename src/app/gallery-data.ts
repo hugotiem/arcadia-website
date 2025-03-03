@@ -26,7 +26,7 @@ export const experiences: Experience[] = [
       title: "Croisières Hebdomadaires",
       description: "Une semaine d'exception où le temps se suspend entre ciel et mer. Nos escales soigneusement sélectionnées vous font découvrir les plus beaux mouillages de Méditerranée.",
       image: "/RESERVATION/3.jpg",
-      details: "Pour quatre hôtes d'exception, nous orchestrons une symphonie maritime où luxe et authenticité composent une partition unique. Sept jours durant lesquels le voilier suspend son vol, entre mouillages confidentiels et navigation d'excellence."
+      details: "Nous proposons des croisières de sept jours pour six passagers, avec un capitaine et un matelot à bord. Le voilier est basé au port de Sète, mais l’embarquement et le débarquement se font à l’endroit de votre choix. La préparation se fait au minimum 15 jours avant le départ, et le programme détaillé est défini au moins un jour avant pour garantir une organisation fluide."
     },
     {
       id: "04",

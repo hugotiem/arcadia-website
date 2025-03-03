@@ -9,19 +9,19 @@ export const espritSections: EspritSection[] = [
   {
     id: "terroir",
     title: "L'esprit de Terroir",
-    description: "Nous vous proposons une sélection de vins et des produits d'exception provenant de domaines que nous connaissons et apprécions. Ces crus, issus de terroirs d'exception, reflètent le savoir-faire des vignerons passionnés avec qui nous travaillons.",
+    description: "Plongez au cœur des saveurs authentiques de la côte française. À bord de notre voilier, chaque escale est une invitation à découvrir des produits d&#39;exception : des grands vins à l’huile d’olive provençale issuent d’olivier centenaires ou des spécialités locales soigneusement sélectionnées. Un véritable voyage gustatif, où la mer rencontre le terroir.",
     image: "/ESPRIT/1.jpg"
   },
   {
     id: "echange",
     title: "L'esprit d'échange & de culture",
-    description: "Notre voilier incarne un lieu où la mer rencontre la culture. En dehors de nos activités de charter, nous organisons des rencontres uniques avec des artistes, écrivains, marins et autres personnalités inspirantes. Ces interviews en mer, moments d'échange privilégiés, nourrissent l'âme du bateau et enrichissent son image, offrant ainsi une dimension culturelle et créative à notre univers.",
+    description: "Notre voilier incarne un lieu où la mer rencontre la culture. En dehors de nos activités de charter, nous organisons des rencontres uniques avec des artistes, écrivains, marins et autres personnalités inspirantes. Ces interviews en mer, moments d’échange privilégiés, nourrissent l’âme du bateau et offre ainsi une dimension culturelle et créative de ce navire",
     image: "/ESPRIT/2.jpg"
   },
   {
     id: "partenariats",
     title: "L'esprit De Partenariats",
-    description: "Imaginez-vous sur le pont, les vagues caressant doucement la coque, le soleil réchauffant votre peau. Profitez de moments de relaxation, de massages en mer ou de séances de yoga pour harmoniser votre corps et votre esprit. Chaque instant est pensé pour vous offrir une semaine totale entre deux croisières et partenaires inoubliables.",
+    description: "Nous ne cessons d’établir des partenariats avec des hôtels, des restaurants raffinés et des prestataires haut de gamme tout au long de la Côte Méditerranéenne. Grâce à ces relations, nous vous offrons un accès privilégié à des lieux d'exception qui partagent notre exigence de qualité et de beauté.",
     image: "/ESPRIT/3.jpg"
   },
   {
@@ -32,8 +32,8 @@ export const espritSections: EspritSection[] = [
   },
   {
     id: "aventure",
-    title: "L'esprit Aventure",
-    description: "Explorez les trésors cachés de la Méditerranée. Embarquez pour des sorties de plongée en mer ou découvrez des criques reculées, accessibles uniquement par bateau. Chaque découverte sauvage et préservée vous transporte, chaque instant est une invitation à l'exploration et à la nature.",
+    title: "L'esprit d'Équipage",
+    description: "À bord de l’Arcadia, l’équipage est bien plus que des marins : ce sont des artistes et voyageurs, maîtres dans l’art du spectacle et de la navigation. Feux d’artifice, danse de flammes, récits d’aventure… ils transforment chaque traversée en une expérience unique. Libres, créatifs et raffinés, ils partagent leur passion avec élégance, offrant un service d’exception et un esprit de vie marin authentique. Plus qu’un équipage, des compagnons d’odyssée.",
     image: "/ESPRIT/5.jpg"
   },
   {

@@ -59,9 +59,9 @@ export default function Reservation() {
   }
 
   return (
-    <main className="min-h-screen bg-white">
+    <main className="min-h-screen bg-white flex flex-col">
       {/* Introduction Section */}
-      <section className="pt-20 pb-4">
+      <section className="pt-20 pb-16">
         <div className="max-w-4xl mx-auto px-4 text-center">
           <h1 className="text-4xl font-bold mb-4 font-minion-pro opacity-0 animate-[fadeInDown_1s_ease-out_forwards]">
             Une Expérience Maritime d&apos;Exception
@@ -76,8 +76,11 @@ export default function Reservation() {
         </div>
       </section>
 
+      {/* Spacer */}
+      <div className="flex-grow" />
+
       {/* Experiences Grid */}
-      <section className="py-10">
+      <section className="py-10 mt-auto">
         <div className="max-w-7xl mx-auto px-4">
           <Gallery />
 
